@@ -10,6 +10,7 @@ body {
   position: relative;
   height: auto;
   min-height: 100%;
+  min-width: 320*$rem;
   font-family: $main-font-family;
   font-weight: 500;
   font-size: 15*$rem;
@@ -36,9 +37,15 @@ textarea {
   outline: none;
 }
 
+button {
+  background-color: transparent;
+}
+
 textarea,
 button,
-input { border: none; }
+input {
+  border: none;
+}
 
 select {
   &::-ms-expand {
@@ -46,14 +53,19 @@ select {
   }
 }
 
-//h1 {
-//  margin-bottom: 45*$rem;
-//  font-weight: 700;
-//  font-size: 16*$rem;
-//  line-height: 19*$rem;
-//  letter-spacing: 0.2*$rem;
-//  text-align: center;
-//}
+@for $i from 1 through 5 {
+  h#{$i} {
+    font-size: (5 - $i) + rem;
+    margin: 1.14rem  0.912rem;
+    letter-spacing: 0.2*$rem;
+    line-height: 1em;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  color: $pure-white;
+}
 
 h5 {
   font-size: 26*$rem;
