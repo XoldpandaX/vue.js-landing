@@ -71,3 +71,20 @@ h5 {
   font-size: 26*$rem;
   font-weight: 400;
 }
+
+.container, .container-fluid {
+  background-color: transparent;
+
+  &--grey {
+    background-color: $second-bg-color;
+  }
+  &--blue {
+    background-color: $support-block-background;
+  }
+  &--dark {
+    background-color: $lower-blocks-background;
+  }
+  &--copyright {
+    background-color: $copyright-bg-color;
+  }
+}
