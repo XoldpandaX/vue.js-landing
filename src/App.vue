@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-    <h4>sdlkfjsdkl</h4>
-    <h3>sdlkfjsdkl</h3>
-    <h2>sdlkfjsdkl</h2>
-    <h1>sdlkfjsdkl</h1>
+    <header-page></header-page>
   </div>
 </template>
 
 <script>
-export default {
+  import HeaderPage from './blocks/HeaderBlock.vue';
 
-}
+  export default {
+    components: {
+      HeaderPage
+    }
+  }
 </script>
 
 <style lang="scss">
   @import "assets/scss/index.scss";
-
-  .wrapper { max-width: 1280px; }
 </style>
