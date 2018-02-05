@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <header-page></header-page>
+    <header-block></header-block>
   </div>
 </template>
 
 <script>
-  import HeaderPage from './blocks/HeaderBlock.vue';
+  import HeaderBlock from './blocks/HeaderBlock.vue';
 
   export default {
     components: {
-      HeaderPage
+      HeaderBlock
     }
   }
 </script>

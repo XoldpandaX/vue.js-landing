@@ -7,6 +7,11 @@
   padding-left: 2rem;
 }
 
+.container {
+  margin: 0 auto !important;
+  max-width: 1280px;
+}
+
 .row {
   box-sizing: border-box;
   display: -ms-flexbox;
@@ -23,6 +28,10 @@
   flex-wrap: wrap;
   margin-right: -1rem;
   margin-left: -1rem;
+
+  @media only screen and (max-width: 48em) {
+    margin: 0;
+  }
 }
 
 .row.reverse {

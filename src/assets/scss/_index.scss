@@ -1,7 +1,11 @@
 @import "0_helpers/normalize.scss";
 @import "0_helpers/flexboxgrid.scss";
 @import "0_helpers/variables.scss";
+@import "0_helpers/extends.scss";
 
 @import "1_layout/layout.scss";
 
-@import "2_blocks/header-block";
+@import "2_blocks/header-block.scss";
+
+@import "3_components/header/logo.scss";
+@import "3_components/header/navigation.scss";

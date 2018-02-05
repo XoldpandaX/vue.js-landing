@@ -30,6 +30,7 @@ a {
   display: block;
   text-decoration: none;
   cursor: pointer;
+  color: $dark-grey;
 }
 
 div,
@@ -45,6 +46,15 @@ textarea,
 button,
 input {
   border: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
 }
 
 select {
@@ -88,5 +98,3 @@ h5 {
     background-color: $copyright-bg-color;
   }
 }
-
-.wrapper { max-width: 1280px; }

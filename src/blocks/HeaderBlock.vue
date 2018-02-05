@@ -1,13 +1,20 @@
 <template>
-  <header class="page-header">
-    <div class="wrapper">
-
+  <div class="page-header">
+    <div class="page-header__inner">
+      <logo></logo>
+      <navigation></navigation>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
-  export default {
+  import Logo from './../components/header/Logo.vue';
+  import Navigation from './../components/header/Navigation.vue';
 
+  export default {
+    components: {
+      Logo,
+      Navigation
+    }
   }
 </script>

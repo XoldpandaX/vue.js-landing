@@ -1,0 +1,20 @@
+.navigation {
+
+  ul {
+
+    li {
+      display: inline-block;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:hover {
+        background-color: lightgray;
+        transition: .6s;
+      }
+
+      a { padding: 2.19em 1.2em; }
+    }
+  }
+}
