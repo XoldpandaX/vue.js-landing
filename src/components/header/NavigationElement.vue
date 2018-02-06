@@ -2,8 +2,8 @@
     <li>
       <a :href="navigationElement.link">
         {{ navigationElement.title }}
-        <span v-if="menu"><icon></icon></span>
       </a>
+      <icon v-if="menu"></icon>
     </li>
 </template>
 

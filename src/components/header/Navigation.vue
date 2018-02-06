@@ -33,14 +33,14 @@
           },
           { id: '4',
             title: 'About',
+            link: '#'
+          },
+          { id: '5',
+            title: 'Sections',
             link: '#',
             menu: [
               1
             ]
-          },
-          { id: '5',
-            title: 'Sections',
-            link: '#'
           }
         ]
       };

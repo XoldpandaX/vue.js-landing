@@ -4,6 +4,7 @@
 
     li {
       display: inline-block;
+      position: relative;
 
       &:last-child {
         padding-right: 0;
@@ -15,6 +16,12 @@
       }
 
       a { padding: 2.19em 1.2em; }
+
+      .arrow-icon {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+      }
     }
   }
 }
