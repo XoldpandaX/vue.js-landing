@@ -1,13 +1,11 @@
-<template>
-  <div class="navigation">
-    <ul>
-      <navigation-element v-for="navigationElement in navigation"
-                          :key="navigationElement.id"
-                          :navigationElement="navigationElement"
-                          :menu="navigationElement.menu"
-                          :isMenuShow="isMenuShow"></navigation-element>
-    </ul>
-  </div>
+<template lang="pug">
+  div.navigation
+    ul
+      navigation-element(v-for="navigationElement in navigation", :key="navigationElement.id",
+                          :navigationElement="navigationElement",
+                          :menu="navigationElement.menu",
+                          :isMenuShow="isMenuShow")
+
 </template>
 
 <script>

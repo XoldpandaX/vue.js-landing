@@ -1,10 +1,8 @@
-<template>
-  <div class="page-header">
-    <div class="page-header__inner">
-      <logo></logo>
-      <navigation></navigation>
-    </div>
-  </div>
+<template lang="pug">
+  div.page-header
+    div.page-header__inner
+      logo
+      navigation
 </template>
 
 <script>

@@ -1,13 +1,9 @@
-<template>
-    <li @click="toggleMenu">
-      <a :href="navigationElement.link">
-        {{ navigationElement.title }}
-      </a>
-      <icon v-if="menu"></icon>
-      <ul v-if="menu && isMenuShow" style="text-align: center; background: red">
-        <li>1</li>
-      </ul>
-    </li>
+<template lang="pug">
+    li(@click="toggleMenu")
+      a(:href="navigationElement.link") {{ navigationElement.title }}
+      icon(v-if="menu")
+      ul(v-if="menu && isMenuShow", style="text-align: center; background: red")
+        li 1
 </template>
 
 <script>

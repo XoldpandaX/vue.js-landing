@@ -1,7 +1,6 @@
-<template>
-  <div id="app">
-    <header-block></header-block>
-  </div>
+<template lang="pug">
+  #app
+    header-block
 </template>
 
 <script>

@@ -1,7 +1,5 @@
-<template>
-  <a href="#" class="logo">
-    {{ title }}
-  </a>
+<template lang="pug">
+  a(href="#", class="logo") {{ title }}
 </template>
 
 <script>
