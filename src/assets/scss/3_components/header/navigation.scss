@@ -1,28 +1,27 @@
 .navigation {
 
-  ul {
+  &__element {
+    display: inline-block;
+    position: relative;
 
-    li {
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:hover {
+      background-color: lightgray;
+      transition: .6s;
+    }
+
+    a {
+      padding: 2.19em 1.2em;
+    }
+
+    .arrow-icon {
       display: inline-block;
-      position: relative;
-
-      &:last-child {
-        padding-right: 0;
-      }
-
-      &:hover {
-        background-color: lightgray;
-        transition: .6s;
-      }
-
-      a { padding: 2.19em 1.2em; }
-
-      .arrow-icon {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: 36%;
-      }
+      position: absolute;
+      right: 0;
+      top: 36%;
     }
   }
 }

@@ -1,9 +1,10 @@
 <template lang="pug">
-    li(@click="toggleMenu")
+    li.navigation__element(@click="toggleMenu")
       a(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
-      ul(v-if="menu && isMenuShow", style="text-align: center; background: red")
-        li 1
+      ul.d(v-if="menu && isMenuShow")
+        li.c(v-for="elem in menu")
+          a {{ elem }}
 </template>
 
 <script>
@@ -32,3 +33,17 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .d {
+    text-align: left;
+    background: red;
+    position: absolute;
+    top: 56px;
+    min-width: 150%;
+    .c {
+      display: list-item;
+      padding-left: .3em;
+    }
+  }
+</style>
