@@ -11,5 +11,8 @@
 
   &__element {
     display: list-item;
+    &:not(:last-child) {
+      padding-bottom: .7em;
+    }
   }
 }
