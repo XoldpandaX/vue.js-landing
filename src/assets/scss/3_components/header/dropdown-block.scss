@@ -1,0 +1,14 @@
+.dropdown-block {
+  @extend %convex-lower-shadow;
+  min-width: 150%;
+  position: absolute;
+  top: 56px;
+  text-align: left;
+  background: $pure-white;
+  border-radius: .1em;
+  padding: .7em;
+
+  &__element {
+    display: list-item;
+  }
+}
