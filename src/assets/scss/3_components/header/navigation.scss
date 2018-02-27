@@ -5,13 +5,17 @@
     position: relative;
     cursor: pointer;
 
+    &:hover {
+      background-color: lightgray;
+      transition: .6s;
+    }
+
     &:last-child {
       padding-right: 0;
     }
 
-    &:hover {
+    &--active {
       background-color: lightgray;
-      transition: .6s;
     }
 
     .arrow-icon {
