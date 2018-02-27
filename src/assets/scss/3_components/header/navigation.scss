@@ -3,6 +3,7 @@
   &__element {
     display: inline-block;
     position: relative;
+    cursor: pointer;
 
     &:last-child {
       padding-right: 0;

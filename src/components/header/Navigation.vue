@@ -17,12 +17,13 @@
         navigation: [
           { id: '1', title: 'Home', link: '#', menu: null },
           { id: '2', title: 'Layouts', link: '#',
-            dropdownMenu: [ 'link 1', 'link 2', 'link 3', 'link 4', ]
+            dropdownMenu: [ 'Feelings This', 'Highway to Hell', 'Black is Black', 'Fly on the Wall', ]
           },
           { id: '3', title: 'Features', link: '#', menu: null },
           { id: '4', title: 'About', link: '#', menu: null },
           { id: '5', title: 'Sections', link: '#',
-            dropdownMenu: [ 'menu link 1', 'menu link 2', 'menu link 3', 'menu link 4', 'menu link 5', 'menu link 6' ]
+            dropdownMenu: [ '72 Hookers', 'Don\'t Call Me White', 'Kill Rock Stars', 'Linoleum', 'Punk Guy',
+                            'She\'s Nubs' ]
           }
         ],
         isMenuShow: false
