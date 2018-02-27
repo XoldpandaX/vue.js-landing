@@ -1,6 +1,6 @@
 <template lang="pug">
     li.navigation__element(@click="toggleMenu")
-      a(:href="navigationElement.link") {{ navigationElement.title }}
+      a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
       ul.d(v-if="menu && isMenuShow")
         li.c(v-for="elem in menu")
