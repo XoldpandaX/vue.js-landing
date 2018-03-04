@@ -17,6 +17,9 @@
     },
     components: {
       NavigationElement
+    },
+    created() {
+
     }
   }
 </script>

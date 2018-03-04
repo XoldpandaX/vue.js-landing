@@ -1,5 +1,5 @@
 <template lang="pug">
-  ul.dropdown-block(v-if="menu && isMenuShow")
+  ul.dropdown-block
     li.dropdown-block__element(v-for="elem in menu")
       a {{ elem }}
 </template>
