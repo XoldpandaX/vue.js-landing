@@ -1,5 +1,5 @@
 <template lang="pug">
-    li.navigation__element
+    li.navigation__element(@click="showMenuBlock(index)")
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
       ul.dropdown-block(v-if="navigationElement.isShow")
@@ -9,18 +9,24 @@
 
 <script>
   import Icon from './../icons/Icon.vue';
+  import { mapActions } from 'vuex';
 
   export default {
     props: {
       navigationElement: {
         type: Object,
+        isRequired: true
       },
       menu: {
         type: Array
+      },
+      index: {
+        type: Number,
+        isRequired: true
       }
     },
     methods: {
-
+      ...mapActions('ui', ['showMenuBlock'])
     },
     components: {
       Icon

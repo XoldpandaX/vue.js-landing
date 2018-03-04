@@ -1,7 +1,7 @@
 <template lang="pug">
   div.navigation
     ul
-      navigation-element(v-for="navigationElement in navigationElements", :key="navigationElement.id",
+      navigation-element(v-for="(navigationElement, index) in navigationElements",                                 :key="navigationElement.id",
                           :navigationElement="navigationElement",
                           :menu="navigationElement.dropdownMenu")
 
