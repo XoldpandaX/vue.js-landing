@@ -2,15 +2,13 @@
     li.navigation__element
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
-      <!--dropdown-block(:menu="menu")-->
-      ul.dropdown-block
+      ul.dropdown-block(v-if="navigationElement.isShow")
         li.dropdown-block__element(v-for="elem in menu")
           a {{ elem }}
 </template>
 
 <script>
   import Icon from './../icons/Icon.vue';
-  import DropdownBlock from './DropdownBlock.vue';
 
   export default {
     props: {
@@ -25,7 +23,7 @@
 
     },
     components: {
-      Icon, DropdownBlock
+      Icon
     }
   }
 </script>
