@@ -1,8 +1,9 @@
 <template lang="pug">
-    li.navigation__element(@click="toggleMenu")
+    <!--li.navigation__element(@click="toggleMenu")-->
+    li.navigation__element
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
-      dropdown-block(:menu="menu", :isMenuShow="isMenuShow")
+      <!--dropdown-block(:menu="menu", :isMenuShow="isMenuShow")-->
 </template>
 
 <script>
@@ -13,13 +14,9 @@
     props: {
       navigationElement: {
         type: Object,
-        required: true
       },
       menu: {
         type: Array
-      },
-      isMenuShow: {
-        type: Boolean
       }
     },
     methods: {
