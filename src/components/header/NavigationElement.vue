@@ -3,9 +3,10 @@
                            :class="{ 'navigation__element--active' : navigationElement.active}")
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
-      ul.dropdown-block(v-if="navigationElement.isShow")
-        li.dropdown-block__element(v-for="elem in menu")
-          a {{ elem }}
+      transition(name="fade")
+        ul.dropdown-block(v-if="navigationElement.isShow")
+          li.dropdown-block__element(v-for="elem in menu")
+            a {{ elem }}
 </template>
 
 <script>
@@ -35,6 +36,11 @@
   }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .4s;
+  }
+  .fade-enter, .fade-leave-to  {
+    opacity: 0;
+  }
 </style>
