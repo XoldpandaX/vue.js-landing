@@ -1,15 +1,15 @@
 <template lang="pug">
   #app
-    .main-wrapper(@click="")
-      header-block
+    header-block
 </template>
 
 <script>
   import HeaderBlock from './blocks/HeaderBlock.vue';
+  import { mapActions } from 'vuex';
 
   export default {
     methods: {
-
+      ...mapActions('ui', ['closeAllMenu'])
     },
     components: {
       HeaderBlock
