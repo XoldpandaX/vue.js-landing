@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    .main-wrapper
+    .main-wrapper(@click="")
       header-block
 </template>
 
@@ -8,6 +8,9 @@
   import HeaderBlock from './blocks/HeaderBlock.vue';
 
   export default {
+    methods: {
+
+    },
     components: {
       HeaderBlock
     }
