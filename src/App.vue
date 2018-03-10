@@ -1,6 +1,7 @@
 <template lang="pug">
   #app
-    header-block
+    .main-wrapper
+      header-block
 </template>
 
 <script>

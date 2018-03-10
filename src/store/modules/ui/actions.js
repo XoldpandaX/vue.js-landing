@@ -1,5 +1,5 @@
 export default {
-  showMenuBlock({ commit }, index) {
-    commit('showMenu', index);
+  toggleMenu({ commit }, index) {
+    commit('toggleMenu', index);
   }
 }

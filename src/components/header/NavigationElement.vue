@@ -1,5 +1,5 @@
 <template lang="pug">
-    li.navigation__element(@click="showMenuBlock(index)")
+    li.navigation__element(@click="toggleMenu(index)")
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
       icon(v-if="menu")
       ul.dropdown-block(v-if="navigationElement.isShow")
@@ -26,7 +26,7 @@
       }
     },
     methods: {
-      ...mapActions('ui', ['showMenuBlock'])
+      ...mapActions('ui', ['toggleMenu'])
     },
     components: {
       Icon
