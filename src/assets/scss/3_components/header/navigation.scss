@@ -30,5 +30,7 @@
     padding: 2.19em 1.2em;
   }
 
-
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
 }
