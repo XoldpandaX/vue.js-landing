@@ -20,4 +20,24 @@
       transition: .6s;
     }
   }
+
+  @media screen and (max-width: $mobile-max) {
+    position: inherit;
+    min-width: auto;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.16),
+                0 11px 10px -10px rgba(0, 0, 0, 0.12);
+
+    &__element {
+      padding-left: 1.7em;
+
+      &:hover {
+        background: $pure-white;
+        transition: .2s;
+      }
+    }
+  }
 }

@@ -23,11 +23,27 @@
       position: absolute;
       right: 0;
       top: 36%;
+
+      @media screen and (max-width: $mobile-max) {
+        position: inherit;
+      }
+    }
+
+    @media screen and (max-width: $mobile-max) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
   }
 
   &__link {
     padding: 2.19em 1.2em;
+
+    @media screen and (max-width: $mobile-max) {
+      padding: 1em;
+      font-weight: bold;
+      padding-right: .2em;
+    }
   }
 
   &__close-btn {
@@ -39,7 +55,6 @@
                 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     position: fixed;
     list-style:none;
-    padding: 10px;
     margin: 0;
     box-sizing: border-box;
     width: 300px;
@@ -55,6 +70,8 @@
       display: block;
       margin-left: auto;
       padding: 0;
+      padding-top: 10px;
+      padding-right: 10px;
     }
 
     &--mobile-active {
