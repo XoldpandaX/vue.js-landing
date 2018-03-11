@@ -1,10 +1,11 @@
 <template lang="pug">
   .mobile-menu(:class="toggleMenu")
-    cross-icon
+    button(@click="closeMobileMenu")
+      cross-icon
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+  import { mapGetters, mapActions } from 'vuex';
   import CrossIcon from './../icons/CrossIcon';
 
   export default {
@@ -14,6 +15,9 @@
       toggleMenu() {
         return this.mobileMenu ? 'mobile-menu--active' : 'mobile-menu--inactive';
       }
+    },
+    methods: {
+      ...mapActions('ui', ['closeMobileMenu'])
     },
     components: {
       CrossIcon

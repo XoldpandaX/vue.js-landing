@@ -25,5 +25,8 @@ export default {
   },
   showMobileMenu(state) {
     state.mobileMenu = true;
+  },
+  closeMobileMenu(state) {
+    state.mobileMenu = false;
   }
 }
