@@ -1,7 +1,7 @@
 .mobile-menu {
   @extend %convex-lower-shadow;
 
-  display: block;
+  display: none;
   position: fixed;
   list-style:none;
   padding: 10px;
@@ -16,12 +16,16 @@
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
 
+  @media screen and (max-width: $mobile-max) {
+    display: block;
+  }
+
   &--active {
     left: 0;
   }
 
   &--inactive {
-    left: -300px;
+    left: -330px;
   }
 
   &__close-btn {
