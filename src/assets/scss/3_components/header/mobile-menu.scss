@@ -23,4 +23,10 @@
   &--inactive {
     left: -300px;
   }
+
+  &__close-btn {
+    padding: 0;
+    margin: 0;
+    float: right;
+  }
 }

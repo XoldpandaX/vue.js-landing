@@ -1,6 +1,6 @@
 <template lang="pug">
   .mobile-menu(:class="toggleMenu")
-    button(@click="closeMobileMenu")
+    button.mobile-menu__close-btn(@click="closeMobileMenu")
       cross-icon
 </template>
 
