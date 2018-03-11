@@ -2,7 +2,7 @@
     li.navigation__element(@click="toggleMenu(index)",
                            :class="{ 'navigation__element--active' : navigationElement.active}")
       a.navigation__link(:href="navigationElement.link") {{ navigationElement.title }}
-      icon(v-if="menu")
+      arrow-icon(v-if="menu")
       transition(name="fade")
         ul.dropdown-block(v-if="navigationElement.isShow")
           li.dropdown-block__element(v-for="elem in menu")
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import Icon from './../icons/Icon.vue';
+  import ArrowIcon from '../icons/ArrowIcon';
   import { mapActions } from 'vuex';
 
   export default {
@@ -31,7 +31,7 @@
       ...mapActions('ui', ['toggleMenu', 'closeAllMenu'])
     },
     components: {
-      Icon
+      ArrowIcon
     }
   }
 </script>
