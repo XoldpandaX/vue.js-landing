@@ -2,7 +2,7 @@
   .mobile-menu(:class="toggleMenu")
     button.mobile-menu__close-btn(@click="closeMobileMenu")
       cross-icon
-    navigation
+    navigation(v-if="mobileMenu")
 </template>
 
 <script>
