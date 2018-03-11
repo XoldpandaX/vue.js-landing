@@ -15,6 +15,15 @@
 
     @media screen and (max-width: $mobile-max) {
       justify-content: center;
+      padding: 0 1.5em;
+    }
+    
+    .static-hamburger-icon {
+      display: none !important;
+
+      @media screen and (max-width: $mobile-max) {
+        display: block !important;
+      }
     }
   }
 }

@@ -5,4 +5,9 @@
   font-size: 2.1rem;
   color: $red;
   font-weight: 600;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
