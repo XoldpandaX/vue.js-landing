@@ -1,11 +1,15 @@
 <template lang="pug">
-  button.static-hamburger-icon
+  button.static-hamburger-icon(@click="toggleMobileMenu")
     span
 </template>
 
 <script>
-  export default {
+  import { mapActions } from 'vuex';
 
+  export default {
+    methods: {
+      ...mapActions('ui', ['toggleMobileMenu'])
+    }
   }
 </script>
 

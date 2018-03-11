@@ -22,5 +22,8 @@ export default {
         state.navigation[i].active = false;
       }
     }
+  },
+  toggleMobileMenu(state) {
+    state.mobileMenu = !state.mobileMenu;
   }
 }

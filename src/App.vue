@@ -5,6 +5,7 @@
 
 <script>
   import HeaderBlock from './blocks/HeaderBlock';
+  import StaticHamburgerIcon from './components/icons/StaticHamburgerIcon';
   import { mapActions } from 'vuex';
 
   export default {

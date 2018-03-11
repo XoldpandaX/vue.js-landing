@@ -1,6 +1,6 @@
 <template lang="pug">
-  div.navigation(v-click-outside="closeAllMenu")
-    ul
+  div.navigation
+    ul(v-click-outside="closeAllMenu")
       navigation-element(v-for="(navigationElement, index) in navigationElements",
                           :key="navigationElement.id",
                           :index="index",

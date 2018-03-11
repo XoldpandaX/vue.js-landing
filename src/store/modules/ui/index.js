@@ -4,7 +4,8 @@ import mutations from './mutations';
 import actions from './actions';
 
 const state = {
-  navigation: userNavigation.default
+  navigation: userNavigation.default,
+  mobileMenu: false
 };
 
 export default {
