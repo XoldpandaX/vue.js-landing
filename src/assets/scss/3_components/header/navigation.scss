@@ -23,10 +23,9 @@
       position: absolute;
       right: 0;
       top: 36%;
-      transform: rotate(-180deg);
-      transition: transform .1s linear;
+      transition: transform .2s linear;
 
-      &--open { transform: rotate(0deg); }
+      &--open { transform: rotate(180deg); }
 
       @media screen and (max-width: $mobile-max) {
         position: inherit;
