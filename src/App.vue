@@ -4,7 +4,7 @@
 </template>
 
 <script>
-  import HeaderBlock from './blocks/HeaderBlock.vue';
+  import HeaderBlock from './blocks/HeaderBlock';
   import { mapActions } from 'vuex';
 
   export default {
