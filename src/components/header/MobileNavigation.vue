@@ -8,18 +8,11 @@
   import CrossIcon from './../icons/CrossIcon';
 
   export default {
-    data() {
-      return {
-        isShow: null
-      };
-    },
     computed: {
       ...mapGetters('ui', ['mobileMenu']),
 
       toggleMenu() {
-        this.isShow = this.mobileMenu;
-
-        return this.isShow ? 'mobile-menu--active' : 'mobile-menu--inactive';
+        return this.mobileMenu ? 'mobile-menu--active' : 'mobile-menu--inactive';
       }
     },
     components: {
