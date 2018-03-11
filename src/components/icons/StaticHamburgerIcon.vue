@@ -38,8 +38,8 @@
       top: 39px;
       left: 13px;
       right: 13px;
-      height: 2px;
-      background: #333;
+      height: 3px;
+      background: #000;
 
       &:before,
       &:after {
@@ -47,8 +47,8 @@
         display: block;
         left: 0;
         width: 100%;
-        height: 2px;
-        background-color: #333;
+        height: 3px;
+        background-color: #000;
         content: "";
       }
 
