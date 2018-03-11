@@ -1,5 +1,5 @@
 <template lang="pug">
-  button.static-hamburger-icon(@click="toggleMobileMenu")
+  button.static-hamburger-icon(@click="showMobileMenu")
     span
 </template>
 
@@ -8,7 +8,7 @@
 
   export default {
     methods: {
-      ...mapActions('ui', ['toggleMobileMenu'])
+      ...mapActions('ui', ['showMobileMenu'])
     }
   }
 </script>

@@ -5,7 +5,7 @@ export default {
   closeAllMenu({ commit }) {
     commit('closeAllMenu');
   },
-  toggleMobileMenu({ commit }) {
-    commit('toggleMobileMenu');
+  showMobileMenu({ commit }) {
+    commit('showMobileMenu');
   }
 }

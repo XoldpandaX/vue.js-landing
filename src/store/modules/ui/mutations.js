@@ -23,7 +23,7 @@ export default {
       }
     }
   },
-  toggleMobileMenu(state) {
-    state.mobileMenu = !state.mobileMenu;
+  showMobileMenu(state) {
+    state.mobileMenu = true;
   }
 }
