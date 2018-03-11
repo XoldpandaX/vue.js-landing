@@ -1,12 +1,11 @@
 <template lang="pug">
-  div.navigation
-    ul(v-click-outside="closeAllMenu")
+  div.navigation(v-click-outside="closeAllMenu")
+    ul
       navigation-element(v-for="(navigationElement, index) in navigationElements",
                           :key="navigationElement.id",
                           :index="index",
                           :navigationElement="navigationElement",
                           :menu="navigationElement.dropdownMenu")
-
 </template>
 
 <script>

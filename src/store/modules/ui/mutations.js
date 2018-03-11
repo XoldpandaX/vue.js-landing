@@ -21,6 +21,7 @@ export default {
         state.navigation[i].isShow = false;
         state.navigation[i].active = false;
       }
+      
     }
   },
   showMobileMenu(state) {

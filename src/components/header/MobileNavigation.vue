@@ -2,7 +2,7 @@
   .mobile-menu(:class="toggleMenu")
     button.mobile-menu__close-btn(@click="closeMobileMenu")
       cross-icon
-
+    navigation
 </template>
 
 <script>
@@ -22,7 +22,8 @@
       ...mapActions('ui', ['closeMobileMenu'])
     },
     components: {
-      CrossIcon
+      CrossIcon,
+      Navigation
     }
   }
 </script>
