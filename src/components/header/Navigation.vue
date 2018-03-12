@@ -1,7 +1,7 @@
 <template lang="pug">
   div.navigation(v-click-outside="closeAllMenu", :class="toggleMobileMenu")
-    button.navigation__close-btn(@click="closeMobileMenu(delay)")
-      cross-icon
+    button.navigation__close-btn(@click="closeMobileMenu(delay), crossAnimation=true")
+      cross-icon(:class="classCrossAnimation")
     ul
       navigation-element(v-for="(navigationElement, index) in navigationElements",
                           :key="navigationElement.id",
@@ -19,7 +19,8 @@
   export default {
     data() {
       return {
-        delay: 150 // time after menu dissapire
+        delay: 300, // time after menu dissapired
+        crossAnimation: false
       };
     },
     computed: {
@@ -27,10 +28,18 @@
 
       toggleMobileMenu() {
         return this.mobileMenu ? 'navigation--mobile-active' : 'navigation--mobile-inactive';
+      },
+      classCrossAnimation() {
+        return this.crossAnimation ? 'transition rotate' : '';
       }
+    },
+    watch: {
+      crossAnimation() { this.stopAnimation(); }
     },
     methods: {
       ...mapActions('ui', ['closeAllMenu', 'closeMobileMenu']),
+
+      stopAnimation() { setTimeout(() => this.crossAnimation = false, 200); }
     },
     components: {
       NavigationElement,
@@ -41,3 +50,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .transition { transition: transform .2s linear; }
+
+  .rotate { transform: rotate(360deg); }
+</style>
