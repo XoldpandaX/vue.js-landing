@@ -75,6 +75,8 @@
       padding: 0;
       padding-top: 10px;
       padding-right: 10px;
+
+      &:active, &:focus { outline: none !important; }
     }
 
     &--mobile-active {
