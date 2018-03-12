@@ -8,7 +8,9 @@ export default {
   showMobileMenu({ commit }) {
     commit('showMobileMenu');
   },
-  closeMobileMenu({ commit }) {
-    commit('closeMobileMenu');
+  closeMobileMenu({ commit }, delay) {
+    setTimeout(() => {
+      commit('closeMobileMenu')
+    }, delay)
   }
 }

@@ -1,6 +1,6 @@
 <template lang="pug">
   div.navigation(v-click-outside="closeAllMenu", :class="toggleMobileMenu")
-    button.navigation__close-btn(@click="closeMobileMenu")
+    button.navigation__close-btn(@click="closeMobileMenu(delay)")
       cross-icon
     ul
       navigation-element(v-for="(navigationElement, index) in navigationElements",
@@ -17,6 +17,11 @@
   import CrossIcon from './../icons/CrossIcon';
 
   export default {
+    data() {
+      return {
+        delay: 150 // time after menu dissapire
+      };
+    },
     computed: {
       ...mapGetters('ui', {navigationElements: 'navigation', mobileMenu: 'mobileMenu'}),
 
