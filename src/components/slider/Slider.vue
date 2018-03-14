@@ -1,5 +1,8 @@
-<template>
-  <p>fsdf</p>
+<template lang="pug">
+  .slider
+    .slider__inner
+      ul.slider__slides
+        li
 </template>
 
 <script>

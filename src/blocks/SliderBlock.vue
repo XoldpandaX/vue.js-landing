@@ -1,5 +1,6 @@
-<template>
-  <slider></slider>
+<template lang="pug">
+  .slider-block
+    slider
 </template>
 
 <script>
@@ -11,7 +12,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
