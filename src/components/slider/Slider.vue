@@ -10,7 +10,3 @@
     name: "slider"
   }
 </script>
-
-<style scoped>
-
-</style>
