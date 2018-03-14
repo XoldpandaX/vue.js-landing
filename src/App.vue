@@ -1,11 +1,12 @@
 <template lang="pug">
   #app
     header-block
+    slider-block
 </template>
 
 <script>
   import HeaderBlock from './blocks/HeaderBlock';
-  import StaticHamburgerIcon from './components/icons/StaticHamburgerIcon';
+  import SliderBlock from './blocks/SliderBlock';
   import { mapActions } from 'vuex';
 
   export default {
@@ -13,7 +14,8 @@
       ...mapActions('ui', ['closeAllMenu'])
     },
     components: {
-      HeaderBlock
+      HeaderBlock,
+      SliderBlock
     }
   }
 </script>
