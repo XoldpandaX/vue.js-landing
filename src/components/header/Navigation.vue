@@ -34,7 +34,7 @@
       }
     },
     watch: {
-      crossAnimation() { this.stopAnimation(); }
+      crossAnimation() { this.stopAnimation(); } // if crossAnimation change, activate stopAnimation1
     },
     methods: {
       ...mapActions('ui', ['closeAllMenu', 'closeMobileMenu']),
