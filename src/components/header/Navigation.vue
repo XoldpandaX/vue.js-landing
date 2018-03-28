@@ -20,7 +20,7 @@
     data() {
       return {
         delay: 300, // time after menu dissapired
-        crossAnimation: false
+        crossAnimation: false // when component created animation disabled
       };
     },
     computed: {
