@@ -7,6 +7,7 @@
           h2 {{ sliderContent[0].text.topText }}
           h1 {{ sliderContent[0].text.middleText }}
           h5 {{ sliderContent[0].text.bottomText }}
+          button.btn {{ sliderContent[0].buttonText }}
 </template>
 
 <script>
