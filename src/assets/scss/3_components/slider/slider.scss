@@ -15,13 +15,11 @@
     width: 100%;
     height: inherit;
     overflow: hidden;
-    background-color: $deep-purple;
   }
 
   &__media {
     height: 100%;
     width: 100%;
-    background-image: url("./assets/media/images/slider/guy.png");
     background-position: center;
     background-size: cover;
   }
@@ -34,8 +32,8 @@
     text-align: right;
     color: $pure-white;
 
-    h1 {
-      text-transform: uppercase;
-    }
+    h1 { text-transform: uppercase; }
+
+    h2, h5 { font-weight: 300; }
   }
 }
