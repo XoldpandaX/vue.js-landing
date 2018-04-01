@@ -1,8 +1,8 @@
 <template lang="pug">
   .slider
     .slider__inner
-      ul.slider__slides
-        li
+      .slider__slide
+        .slider__media
 </template>
 
 <script>

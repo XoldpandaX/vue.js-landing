@@ -1,5 +1,4 @@
 <template lang="pug">
-  .slider-block
     slider
 </template>
 

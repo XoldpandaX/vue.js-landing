@@ -1,5 +1,7 @@
 .slider {
-  height: 100%;
+  position: relative;
+  height: 92vh;
+  z-index: -1;
 
   &__inner {
     position: absolute;
@@ -9,11 +11,17 @@
     height: 100%;
   }
 
-  &__slides {
+  &__slide {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+    background-color: $deep-purple;
+  }
 
-    li {
-      background-image: url('/../../../media/images/slider/guy.png');
-
-    }
+  &__media {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/media/images/slider/guy.png");
+    background-position: center;
   }
 }
