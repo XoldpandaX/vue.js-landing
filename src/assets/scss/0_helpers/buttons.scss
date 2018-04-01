@@ -1,4 +1,44 @@
 .btn {
-  display: inline-block;
+  @extend %convex-lower-shadow;
 
+  padding: .3em .8em;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,.1);
+  background-color: $pure-white;
+  border-radius: .1em;
+  font-size: 125%;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  //** Buttons with background
+  &--primed {
+    color: #fff;
+
+    $primed-btn: (
+        btn--primary: $yellow,
+        btn--important: $red,
+        btn--lower-blocks: $lower-blocks-background,
+    );
+
+    @each $type, $color in $primed-btn {
+      &.#{$type} {
+        background-color: $color;
+        border-color: $color;
+
+        @if $type != 'btn--inactive' {
+          &:hover,
+          &:focus {
+            background-color: saturate($color, $percent-saturation);
+            border-color: saturate($color, $percent-saturation);
+          }
+        } @else {
+          &:hover,
+          &:focus {
+            background-color: $color;
+            border-color: $color;
+          }
+        }
+      }
+    }
+  }
 }

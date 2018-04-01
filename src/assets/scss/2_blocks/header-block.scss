@@ -5,6 +5,7 @@
   width: 100%;
   height: 80px;
   background-color: $second-bg-color;
+  z-index: 999;
 
   &__inner {
     display: flex;
