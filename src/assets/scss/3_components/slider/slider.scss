@@ -23,13 +23,20 @@
     background-size: cover;
   }
 
-  &__text-info {
+  &__info {
     position: absolute;
     top: 40%;
-    left: 35%;
-    width: 50%;
+    left: 15%;
+    width: 70%;
     text-align: right;
     color: $pure-white;
+
+    h1, h2, h5 {
+      margin: 0;
+      margin-bottom: 10*$rem;
+    }
+
+    h5 { margin-bottom: 50*$rem; }
 
     h1 { text-transform: uppercase; }
 

@@ -6,16 +6,16 @@
   border: 1px solid rgba(0,0,0,.1);
   background-color: $pure-white;
   border-radius: .1em;
-  font-size: 125%;
-  text-transform: uppercase;
   line-height: 1.5;
+
+  &--uppercase { text-transform: uppercase; }
 
   //** Buttons with background
   &--primed {
     color: #fff;
 
     $primed-btn: (
-        btn--primary: $yellow,
+        btn--primary: $primary-button,
         btn--important: $red,
         btn--lower-blocks: $lower-blocks-background,
     );
@@ -39,6 +39,17 @@
           }
         }
       }
+    }
+  }
+
+  $sized-btn: (
+    btn--mid: .7em 1.3em,
+    btn--big: 1em 1.6em
+  );
+
+  @each $type, $size in $sized-btn {
+    &.#{$type} {
+      padding: $size;
     }
   }
 }
