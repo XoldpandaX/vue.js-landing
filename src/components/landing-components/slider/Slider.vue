@@ -8,7 +8,8 @@
           h1 {{ currentSliderContent.text.middleText }}
           h5 {{ currentSliderContent.text.bottomText }}
           button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ currentSliderContent.buttonText }}
-      indicators(:sliderContent="sliderContent")
+      indicators(:sliderContent="sliderContent",
+                 @slideWasChanged="currentSliderContent = sliderContent[$event]")
 </template>
 
 <script>
@@ -20,11 +21,14 @@
     data() {
       return {
         sliderContent: sliderContent,
-        currentSliderContent: sliderContent[0]
+        currentSliderContent: null
       }
     },
     methods: {
-
+    },
+    created() {
+        const random = Math.floor(Math.random() * this.sliderContent.length);
+        this.currentSliderContent = sliderContent[random];
     },
     components: {
       Indicators

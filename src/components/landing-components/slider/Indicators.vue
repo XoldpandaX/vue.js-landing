@@ -1,7 +1,7 @@
 <template lang="pug">
   ul.indicators
     li(v-for="(sliderContent, index) in sliderContent.length",
-       @click="") {{ index }}
+       @click="changeSlide(index)") {{ index }}
 </template>
 
 <script>
@@ -14,7 +14,9 @@
       }
     },
     methods: {
-
+      changeSlide(slideNumber) {
+        this.$emit('slideWasChanged', slideNumber);
+      }
     }
   }
 </script>

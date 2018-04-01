@@ -24,7 +24,7 @@ export const sliderContent = [
     color: '#3949ab',
     buttonText: 'get started',
     text: {
-      topText: 'Based on the ideology',
+      topText: 'Based on the',
       middleText: 'ideology',
       bottomText: 'of component approach'
     }
@@ -34,7 +34,7 @@ export const sliderContent = [
     color: '#8e24aa',
     buttonText: 'get started',
     text: {
-      topText: 'Feel Power Of The',
+      topText: 'Feel The Power Of',
       middleText: 'Vue.js',
       bottomText: 'and become stronger'
     }
