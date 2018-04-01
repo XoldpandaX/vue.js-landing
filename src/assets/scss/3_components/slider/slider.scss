@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  height: 92vh;
+  height: 100vh;
   z-index: -1;
 
   &__inner {
@@ -23,5 +23,6 @@
     width: 100%;
     background-image: url("./assets/media/images/slider/guy.png");
     background-position: center;
+    background-size: cover;
   }
 }
