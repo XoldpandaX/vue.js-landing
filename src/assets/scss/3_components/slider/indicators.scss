@@ -1,0 +1,13 @@
+.indicators {
+
+  li {
+    display: inline-block;
+    margin-right: 3px;
+    height: 20*$rem;
+    width: 20*$rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-color: red;
+  }
+}

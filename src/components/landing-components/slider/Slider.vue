@@ -1,14 +1,14 @@
 <template lang="pug">
   .slider
     .slider__inner
-      .slider__slide(:style="{'background-color': `${sliderContent.color}`}")
-        .slider__media(:style="{'background-image': `url(${sliderContent.image})`}")
+      .slider__slide(:style="{'background-color': `${currentSliderContent.color}`}")
+        .slider__media(:style="{'background-image': `url(${currentSliderContent.image})`}")
         .slider__info
-          h2 {{ sliderContent.text.topText }}
-          h1 {{ sliderContent.text.middleText }}
-          h5 {{ sliderContent.text.bottomText }}
-          button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ sliderContent.buttonText }}
-      indicators
+          h2 {{ currentSliderContent.text.topText }}
+          h1 {{ currentSliderContent.text.middleText }}
+          h5 {{ currentSliderContent.text.bottomText }}
+          button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ currentSliderContent.buttonText }}
+      indicators(:sliderContent="sliderContent")
 </template>
 
 <script>
@@ -19,7 +19,8 @@
     name: "slider",
     data() {
       return {
-        sliderContent: sliderContent[0]
+        sliderContent: sliderContent,
+        currentSliderContent: sliderContent[0]
       }
     },
     methods: {

@@ -17,14 +17,14 @@
     props: {
       navigationElement: {
         type: Object,
-        isRequired: true
+        required: true
       },
       menu: {
         type: Array
       },
       index: {
         type: Number,
-        isRequired: true
+        required: true
       }
     },
     methods: {
