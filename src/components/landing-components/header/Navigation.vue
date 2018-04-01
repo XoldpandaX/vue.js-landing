@@ -29,9 +29,7 @@
       toggleMobileMenu() {
         return this.mobileMenu ? 'navigation--mobile-active' : 'navigation--mobile-inactive';
       },
-      classCrossAnimation() {
-        return this.crossAnimation ? 'transition rotate' : '';
-      }
+      classCrossAnimation() { return this.crossAnimation ? 'transition rotate' : ''; }
     },
     watch: {
       crossAnimation() { this.stopAnimation(); } // if crossAnimation change, activate stopAnimation1
