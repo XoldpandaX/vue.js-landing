@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import ArrowIcon from '../icons/ArrowIcon';
+  import ArrowIcon from '../../icons/ArrowIcon';
   import { mapActions } from 'vuex';
 
   export default {

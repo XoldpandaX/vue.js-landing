@@ -14,7 +14,7 @@
   import { mapGetters, mapActions } from 'vuex';
   import ClickOutside from 'vue-click-outside';
   import NavigationElement from './NavigationElement.vue';
-  import CrossIcon from './../icons/CrossIcon';
+  import CrossIcon from './../../icons/CrossIcon';
 
   export default {
     data() {

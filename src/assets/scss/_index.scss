@@ -3,6 +3,10 @@
 @import "0_helpers/extends.scss";
 @import "0_helpers/mixins.scss";
 
+// libs
+@import "~bootstrap-4-grid";
+// end libs
+
 @import "1_layout/layout.scss";
 
 @import "2_blocks/header-block.scss";

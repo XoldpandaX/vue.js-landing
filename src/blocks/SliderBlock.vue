@@ -4,7 +4,7 @@
 </template>
 
 <script>
-  import Slider from './../components/slider/Slider';
+  import Slider from './../components/landing-components/slider/Slider';
 
   export default {
     components: {

@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import Logo from './../components/header/Logo';
+  import Logo from './../components/landing-components/header/Logo';
   import StaticHamburgerIcon from './../components/icons/StaticHamburgerIcon';
-  import Navigation from './../components/header/Navigation';
+  import Navigation from './../components/landing-components/header/Navigation';
 
   export default {
     components: {
