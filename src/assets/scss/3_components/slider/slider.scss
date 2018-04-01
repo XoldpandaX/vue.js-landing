@@ -25,4 +25,17 @@
     background-position: center;
     background-size: cover;
   }
+
+  &__text-info {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    width: 50%;
+    text-align: right;
+    color: $pure-white;
+
+    h1 {
+      text-transform: uppercase;
+    }
+  }
 }
