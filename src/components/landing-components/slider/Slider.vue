@@ -3,14 +3,14 @@
     .slider__inner
       .slider__slide(:style="{'background-color': `${currentSliderContent.color}`}")
         .slider__media(:style="{'background-image': `url(${currentSliderContent.image})`}")
-          transition(name="fade")
+          transition(name="bounce")
             .slider__info(v-if="!animate")
               h2 {{ currentSliderContent.text.topText }}
               h1 {{ currentSliderContent.text.middleText }}
               h5 {{ currentSliderContent.text.bottomText }}
               button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ currentSliderContent.buttonText }}
       indicators(:sliderContent="sliderContent",
-                 @slideWasChanged="currentSliderContent = sliderContent[$event], animate = true")
+                 @slideWasChanged="sliderWasChanged($event), animate = true")
 </template>
 
 <script>
@@ -28,12 +28,18 @@
     },
     watch: {
       animate() {
-        setTimeout(() => this.animate = false, 200);
+        setTimeout(() => this.animate = false, 300);
       }
     },
-    created() {
-        const random = Math.floor(Math.random() * this.sliderContent.length);
-        this.currentSliderContent = sliderContent[random];
+    methods: {
+      sliderWasChanged(event, animationActivator) {
+        this.currentSliderContent = sliderContent[event];
+      }
+    },
+    mounted() {
+      this.animate = true;
+      const random = Math.floor(Math.random() * this.sliderContent.length);
+      this.currentSliderContent = sliderContent[random];
     },
     components: {
       Indicators
@@ -42,11 +48,50 @@
 </script>
 
 <style>
-  .fade-enter {
+  /*.fade-enter {*/
+    /*opacity: 0;*/
+  /*}*/
+
+  /*.fade-enter-active {*/
+    /*transition: opacity .8s;*/
+  /*}*/
+
+  /*.fade-leave-active {*/
+    /*transition: opacity .8s;*/
+  /*}*/
+
+  /*.fade-leave-to {*/
+    /*opacity: 0;*/
+  /*}*/
+
+  .bounce-enter {
     opacity: 0;
   }
 
-  .fade-enter-active {
-    transition: opacity 1.8s;
+  .bounce-enter-active {
+    animation: bounce-in .3s ease-in;
+    transition: opacity .3s;
   }
+
+  .bounce-leave-active {
+    animation: bounce-in .3s reverse ease-in;
+    transition: opacity .3s;
+  }
+
+  .bounce-leave-to {
+    opacity: 0;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 </style>
