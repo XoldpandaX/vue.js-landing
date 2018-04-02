@@ -1,7 +1,8 @@
 <template lang="pug">
   .slider
     .slider__inner
-      .slider__slide(:style="{'background-color': `${currentSliderContent.color}`}")
+      .slider__slide(class="",
+                     :style="{'background-color': `${currentSliderContent.color}`}")
         .slider__media(:style="{'background-image': `url(${currentSliderContent.image})`}")
           transition(name="bounce")
             .slider__info(v-if="!animate")
@@ -28,7 +29,7 @@
     },
     watch: {
       animate() {
-        setTimeout(() => this.animate = false, 300);
+        setTimeout(() => this.animate = false, 400);
       }
     },
     methods: {
@@ -69,13 +70,13 @@
   }
 
   .bounce-enter-active {
-    animation: bounce-in .3s ease-in;
-    transition: opacity .3s;
+    animation: bounce-in .3s ease-out;
+    transition: opacity .4s;
   }
 
   .bounce-leave-active {
     animation: bounce-in .3s reverse ease-in;
-    transition: opacity .3s;
+    transition: opacity .4s;
   }
 
   .bounce-leave-to {

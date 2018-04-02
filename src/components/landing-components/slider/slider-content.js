@@ -25,7 +25,7 @@ export const sliderContent = [
     buttonText: 'get started',
     text: {
       topText: 'Based on the',
-      middleText: 'ideology',
+      middleText: 'Excellent ideology',
       bottomText: 'of component approach'
     }
   },
