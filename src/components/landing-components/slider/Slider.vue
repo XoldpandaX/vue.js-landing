@@ -1,8 +1,7 @@
 <template lang="pug">
   .slider
-    .slider__inner
-      .slider__slide(class="",
-                     :style="{'background-color': `${currentSliderContent.color}`}")
+    .slider__inner(class="blinkAnimation")
+      .slider__slide(:style="{'background-color': `${currentSliderContent.color}`}")
         .slider__media(:style="{'background-image': `url(${currentSliderContent.image})`}")
           transition(name="bounce")
             .slider__info(v-if="!animate")
@@ -33,11 +32,11 @@
       }
     },
     methods: {
-      sliderWasChanged(event, animationActivator) {
+      sliderWasChanged(event) {
         this.currentSliderContent = sliderContent[event];
       }
     },
-    mounted() {
+    created() {
       this.animate = true;
       const random = Math.floor(Math.random() * this.sliderContent.length);
       this.currentSliderContent = sliderContent[random];
