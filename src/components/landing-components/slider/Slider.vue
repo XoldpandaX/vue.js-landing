@@ -1,6 +1,6 @@
 <template lang="pug">
   .slider
-    .slider__inner(class="blinkAnimation")
+    .slider__inner(:style="{'opacity': sliderOpacity}")
       .slider__slide(:style="{'background-color': `${currentSliderContent.color}`}")
         .slider__media(:style="{'background-image': `url(${currentSliderContent.image})`}")
           transition(name="bounce")
@@ -9,8 +9,9 @@
               h1 {{ currentSliderContent.text.middleText }}
               h5 {{ currentSliderContent.text.bottomText }}
               button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ currentSliderContent.buttonText }}
-      indicators(:sliderContent="sliderContent",
-                 @slideWasChanged="sliderWasChanged($event), animate = true")
+      indicators(ref="indicatorBtn",
+                 :sliderContent="sliderContent",
+                 @slideWasChanged="sliderWasChanged($event), animate = true, opacityAnimate = true")
 </template>
 
 <script>
@@ -23,12 +24,22 @@
       return {
         sliderContent: sliderContent,
         currentSliderContent: null,
-        animate: false
+        animate: false,
+        opacityAnimate: false,
+        opacity: 1 // start opacity
+      }
+    },
+    computed: {
+      sliderOpacity() {
+        return this.opacity = this.opacityAnimate ? 0.8 : 1;
       }
     },
     watch: {
       animate() {
         setTimeout(() => this.animate = false, 500);
+      },
+      opacityAnimate() {
+        setTimeout(() => this.opacityAnimate = false, 250);
       }
     },
     methods: {
@@ -37,9 +48,7 @@
       }
     },
     created() {
-      this.animate = true;
-      const random = Math.floor(Math.random() * this.sliderContent.length);
-      this.currentSliderContent = sliderContent[random];
+      this.currentSliderContent = sliderContent[0];
     },
     components: {
       Indicators
@@ -48,38 +57,34 @@
 </script>
 
 <style>
-  /*.fade-enter {*/
-    /*opacity: 0;*/
-  /*}*/
-
-  /*.fade-enter-active {*/
-    /*transition: opacity .8s;*/
-  /*}*/
-
-  /*.fade-leave-active {*/
-    /*transition: opacity .8s;*/
-  /*}*/
-
-  /*.fade-leave-to {*/
-    /*opacity: 0;*/
-  /*}*/
-
   .bounce-enter {
     opacity: 0;
   }
 
   .bounce-enter-active {
-    animation: bounce-in .3s ease-out;
-    transition: opacity .3s;
+    animation: bounce-in .6s;
+    transition: opacity .6s;
   }
 
   .bounce-leave-active {
-    animation: bounce-in .7s reverse ease-in;
-    transition: opacity .7s;
+    animation: bounce-out .5s reverse ease-in;
+    transition: opacity .5s;
   }
 
   .bounce-leave-to {
     opacity: 0;
+  }
+
+  @keyframes bounce-out {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   @keyframes bounce-in {
@@ -87,7 +92,7 @@
       transform: scale(0);
     }
     50% {
-      transform: scale(1.2);
+      transform: scale(1);
     }
     100% {
       transform: scale(1);

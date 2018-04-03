@@ -20,7 +20,7 @@
     },
     methods: {
       changeSlide(slideNumber) {
-        if (this.currentSlide !== slideNumber) {
+        if (this.currentSlide !== +slideNumber) {
           this.$emit('slideWasChanged', slideNumber);
           this.currentSlide = slideNumber;
         }

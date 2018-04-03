@@ -8,6 +8,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: opacity .3s; // for animation in slider component
   }
 
   &__slide {
