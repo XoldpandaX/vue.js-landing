@@ -62,8 +62,8 @@
   }
 
   .bounce-enter-active {
-    animation: bounce-in .5s;
-    transition: opacity .5s;
+    animation: bounce-in .3s;
+    transition: opacity .3s;
   }
 
   .bounce-leave-active {
