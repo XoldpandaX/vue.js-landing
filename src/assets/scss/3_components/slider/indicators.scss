@@ -1,6 +1,6 @@
 .indicators {
 
-  li {
+  &__element {
     display: inline-block;
     margin-right: 3px;
     height: 20*$rem;
@@ -9,5 +9,9 @@
     text-align: center;
     cursor: pointer;
     background-color: red;
+    
+    &--active {
+      background-color: #fff;
+    }
   }
 }
