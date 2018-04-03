@@ -2,7 +2,7 @@
   ul.indicators
     li.indicators__element(v-for="(sliderContent, index) in sliderContent.length",
                            :class="index == currentSlide ? 'indicators__element--active' : ''",
-                           @click="changeSlide(index)") {{ index }}
+                           @click="changeSlide(index)")
 </template>
 
 <script>

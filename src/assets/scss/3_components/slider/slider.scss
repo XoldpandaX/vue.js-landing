@@ -46,7 +46,7 @@
 
   .indicators {
     position: absolute;
-    top: 50%;
-    left: 30%;
+    bottom: 60*$rem;
+    width: 100%;
   }
 }

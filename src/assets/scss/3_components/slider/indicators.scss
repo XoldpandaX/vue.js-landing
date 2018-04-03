@@ -1,17 +1,18 @@
 .indicators {
+  text-align: center;
 
   &__element {
     display: inline-block;
-    margin-right: 3px;
-    height: 20*$rem;
-    width: 20*$rem;
+    position: relative;
+    margin: 0 12px;
+    height: 16*$rem;
+    width: 16*$rem;
     border-radius: 50%;
-    text-align: center;
     cursor: pointer;
-    background-color: red;
+    background-color: $pure-white;
     
     &--active {
-      background-color: #fff;
+      background-color: $red;
     }
   }
 }
