@@ -13,9 +13,17 @@
         required: true
       }
     },
+    data() {
+      return {
+        currentSlide: '' // current slide number
+      };
+    },
     methods: {
       changeSlide(slideNumber) {
-        this.$emit('slideWasChanged', slideNumber);
+        if (this.currentSlide !== slideNumber) {
+          this.$emit('slideWasChanged', slideNumber);
+          this.currentSlide = slideNumber;
+        }
       }
     }
   }

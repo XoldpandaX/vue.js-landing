@@ -28,7 +28,7 @@
     },
     watch: {
       animate() {
-        setTimeout(() => this.animate = false, 400);
+        setTimeout(() => this.animate = false, 500);
       }
     },
     methods: {
@@ -70,12 +70,12 @@
 
   .bounce-enter-active {
     animation: bounce-in .3s ease-out;
-    transition: opacity .4s;
+    transition: opacity .3s;
   }
 
   .bounce-leave-active {
-    animation: bounce-in .3s reverse ease-in;
-    transition: opacity .4s;
+    animation: bounce-in .7s reverse ease-in;
+    transition: opacity .7s;
   }
 
   .bounce-leave-to {
@@ -87,7 +87,7 @@
       transform: scale(0);
     }
     50% {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
     100% {
       transform: scale(1);
