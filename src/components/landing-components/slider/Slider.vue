@@ -62,12 +62,12 @@
   }
 
   .bounce-enter-active {
-    animation: bounce-in .6s;
-    transition: opacity .6s;
+    animation: bounce-in .5s;
+    transition: opacity .5s;
   }
 
   .bounce-leave-active {
-    animation: bounce-out .5s reverse ease-in;
+    animation: bounce-out .6s reverse ease-in;
     transition: opacity .5s;
   }
 
@@ -80,7 +80,7 @@
       transform: scale(0);
     }
     50% {
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
     100% {
       transform: scale(1);
@@ -92,7 +92,7 @@
       transform: scale(0);
     }
     50% {
-      transform: scale(1);
+      transform: scale(1.1);
     }
     100% {
       transform: scale(1);
