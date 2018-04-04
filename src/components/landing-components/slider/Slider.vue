@@ -36,7 +36,7 @@
     },
     watch: {
       animate() {
-        setTimeout(() => this.animate = false, 500);
+        setTimeout(() => this.animate = false, 600);
       },
       opacityAnimate() {
         setTimeout(() => this.opacityAnimate = false, 250);
