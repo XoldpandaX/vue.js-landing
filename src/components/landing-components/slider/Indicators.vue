@@ -20,7 +20,11 @@
       };
     },
     methods: {
-      changeSlide(slideNumber) {
+      changeSlide(slideNumber, isFirstLoad = false) {
+        if (isFirstLoad) {
+          this.currentSlide = slideNumber;
+        }
+
         if (this.currentSlide !== +slideNumber) {
           this.$emit('slideWasChanged', slideNumber);
           this.currentSlide = slideNumber;

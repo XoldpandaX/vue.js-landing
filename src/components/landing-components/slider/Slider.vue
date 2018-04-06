@@ -9,7 +9,7 @@
               h1 {{ currentSliderContent.text.middleText }}
               h5 {{ currentSliderContent.text.bottomText }}
               button.btn.btn--primed.btn--primary.btn--uppercase.btn--big {{ currentSliderContent.buttonText }}
-      indicators(ref="indicatorBtn",
+      indicators(ref="indicator",
                  :sliderContent="sliderContent",
                  @slideWasChanged="sliderWasChanged($event), animate = true, opacityAnimate = true")
 </template>
@@ -24,6 +24,7 @@
       return {
         sliderContent: sliderContent,
         currentSliderContent: null,
+        initialSliderPosition: 0,
         animate: false,
         opacityAnimate: false,
         opacity: 1 // start opacity
@@ -45,10 +46,16 @@
     methods: {
       sliderWasChanged(event) {
         this.currentSliderContent = sliderContent[event];
+      },
+      initialSliderChange(number) {
+        this.$refs.denis.changeSlide(number);
       }
     },
     created() {
-      this.currentSliderContent = sliderContent[0];
+      this.currentSliderContent = sliderContent[this.initialSliderPosition];
+    },
+    mounted() {
+      this.$refs.indicator.changeSlide(this.initialSliderPosition, true);
     },
     components: {
       Indicators
@@ -57,9 +64,7 @@
 </script>
 
 <style>
-  .bounce-enter {
-    opacity: 0;
-  }
+  .bounce-enter { opacity: 0; }
 
   .bounce-enter-active {
     animation: bounce-in .3s;
@@ -71,9 +76,7 @@
     transition: opacity .5s;
   }
 
-  .bounce-leave-to {
-    opacity: 0;
-  }
+  .bounce-leave-to { opacity: 0; }
 
   @keyframes bounce-out {
     0% {
