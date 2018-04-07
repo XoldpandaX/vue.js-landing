@@ -10,6 +10,11 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: $pure-white;
+
+    @media (max-width: $mobile-upper-max) {
+      height: 19*$rem;
+      width: 19*$rem;
+    }
     
     &--active {
       background-color: $red;
