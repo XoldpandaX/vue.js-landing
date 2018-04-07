@@ -17,15 +17,8 @@
     data() {
       return {
         currentSlide: '', // current slide number
-        period: 0, // a period of time(value depends on this.truePeriod) when slide will change
-        truePeriod: 0, // immutable period of time
-        idInterval: null
+        autoChangeTime: 5000, // a period of time(value depends on this.truePeriod) when slide will change
       };
-    },
-    watch: {
-      period() {
-        setTimeout(() => { this.period = this.truePeriod; }, 1000); //  this timeout needs when user click to change slides buttons
-      }
     },
     methods: {
       changeSlide(slideNumber, isFirstLoad = false) {
@@ -38,28 +31,31 @@
           this.currentSlide = slideNumber;
         }
       },
+      autoChangeSlide(currentSlide, sliderLength) {
+        if (currentSlide === (sliderLength - 1)) {
+          currentSlide = 0;
+          this.currentSlide = currentSlide;
+          this.$emit('slideWasChanged', currentSlide);
+        } else {
+          currentSlide++;
+          this.currentSlide = currentSlide;
+          this.$emit('slideWasChanged', currentSlide);
+        }
+      },
       autoSlideChanger(refresh = false) {
         if (!refresh) {
           this.intervalID = setInterval(() => {
-            if (this.currentSlide === (this.sliderContent.length - 1)) {
-              this.currentSlide = 0;
-              this.$emit('slideWasChanged', this.currentSlide);
-            } else {
-              this.currentSlide++;
-              this.$emit('slideWasChanged', this.currentSlide);
-            }
-          }, this.period);
+            this.autoChangeSlide(this.currentSlide, this.sliderContent.length);
+          }, this.autoChangeTime);
         } else {
           clearInterval(this.intervalID);
+
+          this.intervalID = setInterval(() => {
+            this.autoChangeSlide(this.currentSlide, this.sliderContent.length);
+          }, this.autoChangeTime);
         }
       }
     },
-    created() {
-      this.truePeriod = 6000;
-      this.period = this.truePeriod;
-    },
-    mounted() {
-      this.autoSlideChanger();
-    }
+    mounted() { this.autoSlideChanger(this.currentSlide, this.currentSlide.length); }
   }
 </script>
