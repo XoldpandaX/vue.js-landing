@@ -34,7 +34,7 @@ export const sliderContent = [
     color: '#8e24aa',
     buttonText: 'get started',
     text: {
-      topText: 'Feel The Power Of',
+      topText: 'Feel Power Of',
       middleText: 'Vue.js',
       bottomText: 'and become stronger'
     }

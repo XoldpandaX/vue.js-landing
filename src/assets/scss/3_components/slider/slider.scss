@@ -2,6 +2,12 @@
   position: relative;
   height: 100vh;
 
+  .btn {
+    @media(max-width: $mobile-upper-md) {
+      font-size: 12*$rem;
+    }
+  }
+
   &__inner {
     position: absolute;
     top: 0;
@@ -23,6 +29,15 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $mobile-upper-max) {
+      background-position: 35% 100%;
+    }
+
+    @media screen and (max-width: $mobile-upper-md) {
+      background-position: 30% 100%;
+    }
   }
 
   &__info {
@@ -37,6 +52,10 @@
       left: 20%;
     }
 
+    @media screen and (max-width: $mobile-upper-md) {
+      left: 25%;
+    }
+
     h1, h2, h5 {
       margin: 0;
       margin-bottom: 10*$rem;
@@ -48,16 +67,32 @@
       text-transform: uppercase;
 
       @media screen and (max-width: $desktop-md) {
-        font-size: 3.5rem;
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width: $mobile-upper-md) {
+        font-size: 1.9rem;
       }
     }
 
     h2, h5 { font-weight: 300; }
+
+    h2 {
+      @media screen and (max-width: $mobile-upper-md) {
+        font-size: 1.6rem;
+      }
+    }
+
+    h5 {
+      @media screen and (max-width: $mobile-upper-md) {
+        font-size: 1rem;
+      }
+    }
   }
 
   .indicators {
     position: absolute;
-    bottom: 60*$rem;
+    bottom: 32*$rem;
     width: 100%;
   }
 }
