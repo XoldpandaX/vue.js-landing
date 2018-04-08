@@ -37,7 +37,7 @@
     },
     watch: {
       animate() {
-        setTimeout(() => this.animate = false, 600);
+        setTimeout(() => this.animate = false, 550);
       },
       opacityAnimate() {
         setTimeout(() => this.opacityAnimate = false, 250);
@@ -64,42 +64,22 @@
 </script>
 
 <style>
-  .bounce-enter { opacity: 0; }
+
+  .bounce-enter {
+    opacity: 0;
+    transform: translateX(70px);
+  }
 
   .bounce-enter-active {
-    animation: bounce-in .3s;
-    transition: opacity .3s;
+    transition: all 0.3s ease-out;
   }
 
   .bounce-leave-active {
-    animation: bounce-out .6s reverse ease-in;
-    transition: opacity .5s;
+    transition: all 0.3s ease-in-out;
   }
 
-  .bounce-leave-to { opacity: 0; }
-
-  @keyframes bounce-out {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.3);
-    }
-    100% {
-      transform: scale(1);
-    }
+  .bounce-leave-to {
+    opacity: 0;
+    transform: translateX(90px);
   }
-
-  @keyframes bounce-in {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
 </style>
