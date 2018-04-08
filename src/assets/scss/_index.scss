@@ -4,18 +4,15 @@
 @import "0_helpers/mixins.scss";
 @import "0_helpers/buttons.scss";
 
-// libs
-@import "~bootstrap-4-grid";
-// end libs
-
 @import "1_layout/layout.scss";
 
 @import "2_blocks/header-block.scss";
 @import "2_blocks/slider-block.scss";
-@import "2_blocks/features.scss";
+@import "2_blocks/features-block";
 
 @import "3_components/header/logo.scss";
 @import "3_components/header/navigation.scss";
 @import "3_components/header/dropdown-block.scss";
 @import "3_components/slider/slider.scss";
 @import "3_components/slider/indicators.scss";
+@import "3_components/features/box.scss";
