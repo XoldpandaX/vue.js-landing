@@ -1,12 +1,11 @@
-<template>
-  <div>
-    <h1>Hello</h1>
-  </div>
+<template lang="pug">
+  section.feautures-block
+    h1 dkfjsdfjl
 </template>
 
 <script>
   export default {
-    name: "features-block.vue"
+    name: "features-block"
   }
 </script>
 
