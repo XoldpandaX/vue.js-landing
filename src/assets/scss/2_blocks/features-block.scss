@@ -1,3 +1,7 @@
 .features {
 
+  &__row {
+    display: flex;
+    flex-flow: row;
+  }
 }

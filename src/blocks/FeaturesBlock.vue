@@ -1,16 +1,16 @@
 <template lang="pug">
   section.feautures
     .features__row
-      block-component
+      info-block(v-for="i in 4")
 </template>
 
 <script>
-  import BlockComponent from './../components/landing-components/features/Block';
+  import InfoBlock from '../components/landing-components/features/InfoBlock';
 
   export default {
     name: "features-block",
     components: {
-      BlockComponent
+      InfoBlock
     }
   }
 </script>
