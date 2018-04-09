@@ -3,5 +3,9 @@
   &__row {
     display: flex;
     flex-flow: row;
+
+    @media(max-width: $desktop-xs) {
+      flex-wrap: wrap;
+    }
   }
 }
