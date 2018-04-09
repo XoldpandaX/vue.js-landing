@@ -1,11 +1,12 @@
 <template lang="pug">
-  .info-block
+  .info-block(:style="{'background-color' : `${background}`}")
     .info-block__icon
       component(:is="selectedComponent")
     .info-block__title
       h5 Material Design
     .info-block__text
-      |is a design language that combines the classic principles of successful design along with innovation and technology.
+      |is a design language that combines the classic principles of successful design
+      |along with innovation and technology.
 </template>
 
 <script>
@@ -21,6 +22,9 @@
     },
     props: {
       selectedComponent: {
+        type: String
+      },
+      background: {
         type: String
       }
     }

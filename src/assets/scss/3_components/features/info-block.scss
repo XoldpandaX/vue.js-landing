@@ -3,6 +3,7 @@
   flex-flow: column;
   padding: 80px;
   width: 25%;
+  color: $pure-white;
 
   &__icon {
     width: 24px;
@@ -10,6 +11,7 @@
 
     svg {
       max-width: 100%;
+      fill: $pure-white;
     }
   }
 
