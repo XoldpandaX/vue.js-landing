@@ -1,7 +1,7 @@
 <template lang="pug">
   section.feautures
     .features__row
-      info-block(v-for="i in 4")
+      info-block(v-for="name in ['StarIcon', 'MarkerIcon', 'eye-icon', 'CogIcon']", :selectedComponent="name")
 </template>
 
 <script>

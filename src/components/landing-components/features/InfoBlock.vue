@@ -1,7 +1,7 @@
 <template lang="pug">
   .info-block
     .info-block__icon
-      star-icon(fill="#876543", width="24px", height="24px")
+      component(:is="selectedComponent")
     .info-block__title
       h5 Material Design
     .info-block__text
@@ -10,11 +10,19 @@
 
 <script>
   import StarIcon from './../../icons/StarIcon';
+  import MarkerIcon from './../../icons/MarkerIcon';
+  import EyeIcon from './../../icons/EyeIcon';
+  import CogIcon from './../../icons/CogIcon';
 
   export default {
     name: "block",
     components: {
-      StarIcon
+      StarIcon, MarkerIcon, EyeIcon, CogIcon
+    },
+    props: {
+      selectedComponent: {
+        type: String
+      }
     }
   }
 </script>
