@@ -3,10 +3,8 @@
     .info-block__icon
       component(:is="selectedComponent")
     .info-block__title
-      h5 Material Design
-    .info-block__text
-      |is a design language that combines the classic principles of successful design
-      |along with innovation and technology.
+      h5 {{ title }}
+    .info-block__text {{ description }}
 </template>
 
 <script>
@@ -25,6 +23,12 @@
         type: String
       },
       background: {
+        type: String
+      },
+      title: {
+        type: String
+      },
+      description: {
         type: String
       }
     }

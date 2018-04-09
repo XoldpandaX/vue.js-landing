@@ -2,7 +2,8 @@
   section.feautures
     .features__row
       info-block(v-for="content in blockContent", :key="content.id",
-                :selectedComponent="content.icon", :background="content.backgroundColor")
+                :selectedComponent="content.icon", :background="content.backgroundColor",
+                :title="content.text.title", :description="content.text.description")
 </template>
 
 <script>
