@@ -1,6 +1,15 @@
 .features {
 
   &__row {
+    .info-block {
+      @media(max-width: $desktop-xs) {
+        padding: 40px;
+        flex-basis: 50%;
+      }
+
+      @media(max-width: $mobile-max) { flex-basis: 100%; }
+    }
+
     display: flex;
     flex-flow: row;
 

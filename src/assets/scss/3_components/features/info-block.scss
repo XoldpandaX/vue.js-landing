@@ -4,13 +4,6 @@
   padding: 80px;
   color: $pure-white;
 
-  @media(max-width: $desktop-xs) {
-    padding: 40px;
-    flex-basis: 50%;
-  }
-
-  @media(max-width: $mobile-max) { flex-basis: 100%; }
-
   &__icon {
     width: 24px;
     height: 24px;
