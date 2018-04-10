@@ -6,7 +6,7 @@
                   :selectedComponent="content.icon", :title="content.text.title",
                   :description="content.text.description")
       .about__row.about__row--centered
-        button.btn.btn--primed.btn--important.btn--big {{ buttonText }}
+        button.btn.btn--primed.btn--important.btn--big.btn--shadow-hover {{ buttonText }}
 </template>
 
 <script>
