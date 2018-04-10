@@ -7,6 +7,10 @@
     flex-flow: row;
     justify-content: space-between;
 
+    &:first-child { margin-bottom: 80*$rem; }
+
+    &--centered { justify-content: center; }
+
     .info-block {
       flex-basis: 33%;
       align-items: center;
@@ -27,10 +31,12 @@
 
       &__title {
 
-        h5 {
-          color: $light-black;;
-        }
+        h5 { color: $light-black; }
       }
+    }
+
+    button.btn {
+      text-transform: uppercase;
     }
   }
 }
