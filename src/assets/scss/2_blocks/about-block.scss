@@ -1,6 +1,36 @@
 .about {
+  padding-top: 80*$rem;
+  padding-bottom: 80*$rem;
 
   &__row {
     display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    .info-block {
+      flex-basis: 33%;
+      align-items: center;
+      padding: 0 15*$rem;
+      text-align: center;
+      color: $light-black;
+
+      &__icon {
+        width: 54*$rem;
+        height: 54*$rem;
+        margin: 20*$rem 0;
+
+        svg {
+          max-width: 100%;
+          fill: $light-black;
+        }
+      }
+
+      &__title {
+
+        h5 {
+          color: $light-black;;
+        }
+      }
+    }
   }
 }
