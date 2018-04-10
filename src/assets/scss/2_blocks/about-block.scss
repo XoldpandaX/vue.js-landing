@@ -1,6 +1,5 @@
 .about {
-  padding-top: 80*$rem;
-  padding-bottom: 80*$rem;
+  padding: 80*$rem 15*$rem;
 
   &__row {
     display: flex;
@@ -11,12 +10,20 @@
 
     &--centered { justify-content: center; }
 
+    @media(max-width: $mobile-max) {
+      flex-wrap: wrap;
+    }
+
     .info-block {
-      flex-basis: 33%;
+      flex-basis: 32%;
       align-items: center;
-      padding: 0 15*$rem;
       text-align: center;
       color: $light-black;
+      padding: 0;
+
+      @media(max-width: $mobile-max) {
+        flex-basis: 100%;
+      }
 
       &__icon {
         width: 54*$rem;
