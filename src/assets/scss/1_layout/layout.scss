@@ -79,8 +79,10 @@ h5 {
   font-weight: 400;
 }
 
-.container, .container-fluid {
+.container {
   background-color: transparent;
+  margin: 0 auto;
+  max-width: 1280px;
 
   &--grey {
     background-color: $second-bg-color;

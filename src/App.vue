@@ -3,12 +3,14 @@
     header-block
     slider-block
     features-block
+    about-block
 </template>
 
 <script>
   import HeaderBlock from './blocks/HeaderBlock';
   import SliderBlock from './blocks/SliderBlock';
   import FeaturesBlock from './blocks/FeaturesBlock';
+  import AboutBlock from './blocks/AboutBlock';
   import { mapActions } from 'vuex';
 
   export default {
@@ -18,7 +20,8 @@
     components: {
       HeaderBlock,
       SliderBlock,
-      FeaturesBlock
+      FeaturesBlock,
+      AboutBlock
     }
   }
 </script>
