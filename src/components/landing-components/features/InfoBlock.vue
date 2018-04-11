@@ -12,11 +12,14 @@
   import MarkerIcon from './../../icons/MarkerIcon';
   import EyeIcon from './../../icons/EyeIcon';
   import CogIcon from './../../icons/CogIcon';
+  import RadarIcon from './../../icons/RadarIcon';
+  import EarthIcon from './../../icons/EarthIcon';
+  import ChatIcon from './../../icons/ChatIcon';
 
   export default {
     name: "block",
     components: {
-      StarIcon, MarkerIcon, EyeIcon, CogIcon
+      StarIcon, MarkerIcon, EyeIcon, CogIcon, RadarIcon, EarthIcon, ChatIcon
     },
     props: {
       selectedComponent: {

@@ -1,7 +1,7 @@
 export const aboutContent = [
   {
     id: '#13',
-    icon: 'StarIcon',
+    icon: 'EarthIcon',
     text: {
       title: 'Design',
       description: 'Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo.'
@@ -9,7 +9,7 @@ export const aboutContent = [
   },
   {
     id: '#14',
-    icon: 'StarIcon',
+    icon: 'ChatIcon',
     text: {
       title: 'Implementation',
       description: 'Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo.'
@@ -17,7 +17,7 @@ export const aboutContent = [
   },
   {
     id: '#15',
-    icon: 'StarIcon',
+    icon: 'RadarIcon',
     text: {
       title: 'Feedback',
       description: 'Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo.'
