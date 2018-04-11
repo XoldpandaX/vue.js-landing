@@ -10,9 +10,7 @@
 
     &--centered { justify-content: center; }
 
-    @media(max-width: $mobile-max) {
-      flex-wrap: wrap;
-    }
+    @media(max-width: $mobile-max) { flex-wrap: wrap; }
 
     .info-block {
       flex-basis: 32%;
@@ -23,6 +21,9 @@
 
       @media(max-width: $mobile-max) {
         flex-basis: 100%;
+        margin-bottom: 40px;
+
+        &:last-child { margin-bottom: 0; }
       }
 
       &__icon {
@@ -42,8 +43,6 @@
       }
     }
 
-    button.btn {
-      text-transform: uppercase;
-    }
+    button.btn { text-transform: uppercase; }
   }
 }
