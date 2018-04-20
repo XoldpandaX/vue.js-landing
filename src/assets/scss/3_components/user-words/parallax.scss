@@ -1,22 +1,30 @@
 .parallax {
-  perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  perspective: 1px;
 
   &__layer {
+    padding: 100vh 0;
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
 
     &--base {
       transform: translateZ(0);
     }
 
     &--back {
-      transform: translate(-1px);
+      transform: translateZ(-1px);
     }
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
