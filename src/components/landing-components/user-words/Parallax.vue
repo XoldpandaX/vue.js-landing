@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    name: "Parralax"
+    name: "Parallax"
   }
 </script>
 
