@@ -1,8 +1,8 @@
 <template lang="pug">
-  .parrallax
-    .parrallax__group
+  .parallax
+    .parallax__group
       .parallax__layer.parallax__layer--back
-      .parallx__layer.paralax__layer--base
+      .parallx__layer.parallax__layer--base
 </template>
 
 <script>
