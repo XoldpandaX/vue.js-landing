@@ -9,6 +9,17 @@
     margin-bottom: 40*$rem;
   }
 
+  .btn {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 34%;
+      left: 35.6%;
+      fill: $pure-white;
+    }
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
