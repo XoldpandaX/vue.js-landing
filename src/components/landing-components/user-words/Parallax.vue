@@ -1,12 +1,25 @@
 <template lang="pug">
-  section.user-words-block
-    .parallax
-      .new-parallax
-        h2 simple parallax
+  .parallax
+    .new-parallax
+      h2 {{ title }}
+      p {{ subtitle }}
+      .parallax__row
+        recall
 </template>
 
 <script>
+  import Recall from './Recall';
+
   export default {
-    name: "Parallax"
+    name: "Parallax",
+    components: {
+      Recall
+    },
+    data() {
+      return {
+        title: 'Customer\'s Words',
+        subtitle: 'What our Customers are telling about us'
+      };
+    }
   }
 </script>

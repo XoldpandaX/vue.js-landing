@@ -1,7 +1,6 @@
 <template lang="pug">
-  .section
+  section.user-words-block
     parallax
-    .d
 </template>
 
 <script>
@@ -14,9 +13,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .d {
-    height: 1000px;
-  }
-</style>

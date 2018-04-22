@@ -1,17 +1,5 @@
 .user-words-block {
   position: relative;
   @include backgrounds();
-  height: 500px;
-
-  h2 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: normal !important;
-    //font-size: 50px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-  }
+  margin-bottom: 1000px;//test
 }
