@@ -1,0 +1,6 @@
+@mixin backgrounds () {  // mixin for parallax block
+  background-attachment: fixed;
+  background-size: cover!important;
+  background-position: center;
+  background-blend-mode: screen;
+}

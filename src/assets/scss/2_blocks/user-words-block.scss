@@ -1,0 +1,16 @@
+.user-words-block {
+  position: relative;
+  @include backgrounds();
+  height: 500px;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+}
