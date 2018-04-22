@@ -6,12 +6,12 @@
         p {{ subtitle }}
       .container
         .parallax__row
-          recall
-          recall
+          recall(v-for="content in userWordsContent", :content="content")
 </template>
 
 <script>
   import Recall from './Recall';
+  import {userWordsContent} from './user-words-content.js';
 
   export default {
     name: "Parallax",
@@ -20,6 +20,7 @@
     },
     data() {
       return {
+        userWordsContent: userWordsContent,
         title: 'Customer\'s Words',
         subtitle: 'What our Customers are telling about us'
       };

@@ -15,7 +15,7 @@
     flex-flow: column;
     align-items: center;
     width: 35%;
-    margin-right: 2%;
+    margin-right: 5%;
 
     p {
       color: $light-black;
@@ -30,6 +30,7 @@
     width: 180px;
     height: 180px;
     border-radius: 48%;
+    border: 2px solid $strange-gray;
   }
 
   &__text {
