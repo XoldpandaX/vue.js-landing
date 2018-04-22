@@ -1,11 +1,8 @@
-<template>
-  <section class="user-words-block">
-    <div class="parallax">
-      <div class="new-paralax">
-        <h1>Simple Paralax</h1>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+  section.user-words-block
+    .parallax
+      .new-parallax
+        h2 simple parallax
 </template>
 
 <script>

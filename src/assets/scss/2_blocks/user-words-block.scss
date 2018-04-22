@@ -3,12 +3,13 @@
   @include backgrounds();
   height: 500px;
 
-  h1 {
+  h2 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-weight: normal !important;
+    //font-size: 50px;
     color: #fff;
     width: 100%;
     text-align: center;
