@@ -6,7 +6,6 @@
     .recall__text
       h3  {{ content.text.topText }}
       p {{ content.text.bottomText }}
-
 </template>
 
 <script>

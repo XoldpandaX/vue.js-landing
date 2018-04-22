@@ -10,6 +10,11 @@
   //height: 300px;
   background-color: $pure-white;
 
+  @media(max-width: $mobile-upper-md) {
+    flex-flow: column;
+    align-items: center;
+  }
+
   &__media {
     display: flex;
     flex-flow: column;
@@ -20,6 +25,8 @@
     p {
       color: $light-black;
       font-style: italic;
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 
@@ -38,6 +45,12 @@
     display: flex;
     flex-flow: column;
     align-items: start;
+
+    @media(max-width: $mobile-upper-md) {
+      align-items: center;
+      width: auto;
+      text-align: center;
+    }
 
     h3 {
       color: $light-red;

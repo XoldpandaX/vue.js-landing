@@ -9,9 +9,24 @@
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: $desktop-md) {
+      flex-flow: column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
     .recall {
       width: 49%;
       height: auto;
+
+      @media(max-width: $desktop-md) {
+        width: 70%;
+        margin-bottom: 20*$rem;
+      }
+
+      @media(max-width: $mobile-upper-max) {
+        width: 100%;
+      }
     }
   }
 
