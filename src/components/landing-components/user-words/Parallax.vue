@@ -1,10 +1,13 @@
 <template lang="pug">
   .parallax
     .new-parallax
-      h2 {{ title }}
-      p {{ subtitle }}
-      .parallax__row
-        recall
+      .new-parallax__content
+        h2 {{ title }}
+        p {{ subtitle }}
+      .container
+        .parallax__row
+          recall
+          recall
 </template>
 
 <script>
