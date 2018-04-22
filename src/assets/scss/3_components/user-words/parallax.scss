@@ -5,6 +5,10 @@
   overflow: hidden;
   color: $pure-white;
 
+  .container {
+    margin-bottom: 40*$rem;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -38,6 +42,10 @@
 
   p {
     text-align: center;
+  }
+
+  .btn {
+    margin: 0 auto;
   }
 
   .new-parallax {

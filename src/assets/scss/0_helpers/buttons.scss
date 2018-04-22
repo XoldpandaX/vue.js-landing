@@ -54,6 +54,15 @@
     }
   }
 
+  &--round {
+    border-radius: 50%;
+
+    &-big {
+      width: 60*$rem;
+      height: 60*$rem;
+    }
+  }
+
   &--shadow-hover {
     @extend %shadow-hover
   }

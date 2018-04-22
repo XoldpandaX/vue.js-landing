@@ -7,6 +7,7 @@
       .container
         .parallax__row
           recall(v-for="content in userWordsContent", :content="content")
+      .btn.btn--primed.btn--important.btn--big.btn--round.btn--round-big.btn--shadow-hover
 </template>
 
 <script>
