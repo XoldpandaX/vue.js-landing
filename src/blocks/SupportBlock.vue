@@ -12,7 +12,3 @@
     name: "SupportBlock"
   }
 </script>
-
-<style scoped>
-
-</style>
