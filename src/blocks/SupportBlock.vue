@@ -2,8 +2,8 @@
   section.support
     .container
       .support__inner
-        .support__description
-        .support__inner
+        .support__description fsdff
+        .support__media dfsdf
 
 </template>
 

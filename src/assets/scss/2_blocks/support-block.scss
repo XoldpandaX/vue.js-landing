@@ -1,0 +1,18 @@
+.support {
+  padding: 100*$rem 20*$rem 120*$rem 20*$rem;
+  background-color: $support-block-background;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__description {
+    flex-basis: 40%;
+    background-color: red;
+  }
+
+  &__media {
+    flex-basis: 60%;
+    background-color: green;
+  }
+}
