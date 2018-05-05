@@ -7,6 +7,11 @@
 
 <script>
   export default {
-    name: "Switcher"
+    name: "Switcher",
+    data() {
+      return {
+        
+      };
+    }
   }
 </script>
