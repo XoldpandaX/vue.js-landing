@@ -1,4 +1,7 @@
 .switcher {
+  $lever-width: 40*$rem;
+  $lever-after-width: 21*$rem;
+  $base-left-indent: 5*$rem;
 
   &__title {
 
@@ -25,11 +28,12 @@
     &:after {
       content: '';
       position: absolute;
-      left: -5px;
+      left: -$base-left-indent;
       top: -3px;
-      width: 21*$rem;
+      width: $lever-after-width;
       height: 21*$rem;
       border-radius: 50%;
+      transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
       background-color: $lever-circle;
       box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
     }
@@ -39,6 +43,8 @@
 
       &:after {
         background-color: $lever-active;
+        //transition: right 1s ease-out 5s;
+        left: calc(#{$lever-width} - (#{$lever-after-width} - #{$base-left-indent}));
       }
     }
   }
