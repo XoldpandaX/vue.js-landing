@@ -18,6 +18,7 @@
         btn--primary: $primary-button,
         btn--important: $light-red,
         btn--lower-blocks: $lower-blocks-background,
+        btn--deep-yellow: $yellow
     );
 
     @each $type, $color in $primed-btn {

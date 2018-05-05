@@ -1,10 +1,16 @@
+$lever-width: 40*$rem;
+$lever-after-width: 21*$rem;
+$base-left-indent: 5*$rem;
+
 .switcher {
-  $lever-width: 40*$rem;
-  $lever-after-width: 21*$rem;
-  $base-left-indent: 5*$rem;
 
   &__title {
+    color: $pure-white;
+    font-weight: normal;
 
+    h5 {
+      margin-bottom: 10*$rem;
+    }
   }
 
   &__main {
@@ -43,9 +49,16 @@
 
       &:after {
         background-color: $lever-active;
-        //transition: right 1s ease-out 5s;
         left: calc(#{$lever-width} - (#{$lever-after-width} - #{$base-left-indent}));
       }
+    }
+  }
+
+  &__description {
+
+    p {
+      color: $strange-gray;
+      line-height: 1.5;
     }
   }
 }

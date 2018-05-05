@@ -11,6 +11,10 @@
     text-align: left;
     padding-right: 20*$rem;
 
+    button.btn--deep-yellow {
+      text-align: center;
+    }
+
     h2 {
       margin: 0 0 25*$rem 0;
       font-weight: normal;
@@ -21,6 +25,35 @@
       color: white;
       font-weight: normal;
       padding-top: 0;
+      line-height: 1.5;
+      font-size: 13*$rem;
+      margin-bottom: 20*$rem;
+    }
+  }
+
+  &__action-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25*$rem;
+
+    @media(max-width: $desktop-md) {
+      flex-flow: column;
+    }
+
+    .switcher {
+      flex-basis: 50%;
+
+      @media(max-width: $desktop-md) {
+        text-align: center;
+      }
+
+      &__main {
+        margin: 0 auto;
+      }
+
+      &__description {
+        padding-right: 20px;
+      }
     }
   }
 

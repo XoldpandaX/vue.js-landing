@@ -1,22 +1,21 @@
 <template lang="pug">
   .switcher
-    .switcher__title title
+    .switcher__title
+      h5 {{ title }}
     .switcher__main
-      .switcher__lever(@click="hel", :class="{'switcher__lever--active': isActive}")
+      .switcher__lever(@click="isActive = !isActive;", :class="{'switcher__lever--active': isActive}")
+    .switcher__description
+      p {{ description }}
 </template>
 
 <script>
   export default {
     name: "Switcher",
+    props: ['title', 'description'],
     data() {
       return {
         isActive: false
       };
-    },
-    methods: {
-      hel() {
-        this.isActive = !this.isActive;
-      }
     }
   }
 </script>
