@@ -9,6 +9,19 @@
   &__description {
     flex-basis: 40%;
     text-align: left;
+    padding-right: 20*$rem;
+
+    h2 {
+      margin: 0 0 25*$rem 0;
+      font-weight: normal;
+      color: white;
+    }
+
+    p {
+      color: white;
+      font-weight: normal;
+      padding-top: 0;
+    }
   }
 
   &__media {
