@@ -5,6 +5,9 @@
   }
 
   &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 120px;
     height: 26px;
     background-color: $light-grey;
@@ -12,6 +15,23 @@
   }
 
   &__lever {
+    position: relative;
+    cursor: pointer;
+    width: 40*$rem;
+    height: 15*$rem;
+    border-radius: 13*$rem;
+    background-color: $lever-default;
 
+    &:after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: -3px;
+      width: 21*$rem;
+      height: 21*$rem;
+      border-radius: 50%;
+      background-color: $lever-circle;
+      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+    }
   }
 }
