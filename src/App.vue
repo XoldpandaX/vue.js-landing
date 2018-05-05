@@ -6,6 +6,7 @@
     about-block
     user-words-block
     support-block
+    details-block
 </template>
 
 <script>
@@ -15,6 +16,7 @@
   import AboutBlock from './blocks/AboutBlock';
   import UserWordsBlock from './blocks/UserWordsBlock';
   import SupportBlock from './blocks/SupportBlock';
+  import DetailsBlock from './blocks/DetailsBlock.vue';
 
   import { mapActions } from 'vuex';
 
@@ -24,7 +26,8 @@
     },
     components: {
       HeaderBlock, SliderBlock, FeaturesBlock,
-      AboutBlock, UserWordsBlock, SupportBlock
+      AboutBlock, UserWordsBlock, SupportBlock,
+      DetailsBlock
     }
   }
 </script>
