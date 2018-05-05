@@ -2,14 +2,29 @@
   padding: 100*$rem 20*$rem 120*$rem 20*$rem;
   background-color: $support-block-background;
 
+  @media(max-width: $tablet-max) {
+    padding: 50*$rem 20*$rem 60*$rem 20*$rem;
+  }
+
   &__inner {
     display: flex;
+
+    @media(max-width: $tablet-max) {
+      flex-flow: column;
+    }
   }
 
   &__description {
     flex-basis: 40%;
     text-align: left;
     padding-right: 20*$rem;
+
+    @media(max-width: $tablet-max) {
+      flex-basis: 100%;
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: 40*$rem;
+    }
 
     button.btn--deep-yellow {
       text-align: center;
@@ -40,6 +55,14 @@
       flex-flow: column;
     }
 
+    @media(max-width: $tablet-max) {
+      flex-flow: row;
+    }
+
+    @media(max-width: $tablet-max) {
+      flex-flow: column;
+    }
+
     .switcher {
       flex-basis: 50%;
 
@@ -64,7 +87,11 @@
     padding-bottom: 30%;
     padding-top: 30*$rem;
     overflow: hidden;
-    background-color: green;
+    background-color: $grey;
+
+    @media(max-width: $tablet-max) {
+      padding-bottom: 54%;
+    }
 
     iframe {
       position: absolute;
