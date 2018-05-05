@@ -1,0 +1,17 @@
+.switcher {
+
+  &__title {
+
+  }
+
+  &__main {
+    width: 120px;
+    height: 26px;
+    background-color: $light-grey;
+    border-radius: 13*$rem;
+  }
+
+  &__lever {
+
+  }
+}
