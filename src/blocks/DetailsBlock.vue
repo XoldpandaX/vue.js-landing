@@ -1,8 +1,9 @@
 <template lang="pug">
   section.details
     .container
-      h2 {{ title }}
-      p {{ description }}
+      header
+        h2 {{ title }}
+        p {{ description }}
       details-info-block
 </template>
 

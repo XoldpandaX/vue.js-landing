@@ -1,0 +1,16 @@
+.details {
+  padding: 100*$rem 20*$rem 90*$rem 20*$rem;
+
+  header {
+    text-align: center;
+
+    h2 {
+      font-weight: normal;
+      color: $support-block-background;
+    }
+
+    p {
+      font-size: 14*$rem;
+    }
+  }
+}
