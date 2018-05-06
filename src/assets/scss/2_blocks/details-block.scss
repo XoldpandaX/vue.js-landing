@@ -23,8 +23,18 @@
 
     .details-info-block {
       flex-basis: calc(100% / 3);
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 10*$rem;
+      padding-right: 10*$rem;
+
+      @media(max-width: $tablet-max) {
+        flex-basis: calc(100% / 2);
+      }
+
+      @media(max-width: $mobile-md) {
+        flex-basis: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       &__icon {
         flex-basis: 120*$rem;

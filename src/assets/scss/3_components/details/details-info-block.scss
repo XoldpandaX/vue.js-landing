@@ -8,7 +8,8 @@
   }
 
   &__text {
-    padding-left: 20px;
+    padding-left: 20*$rem;
+    padding-right: 15*$rem;
 
     h5  {
       margin: 10*$rem 0 15*$rem 0;

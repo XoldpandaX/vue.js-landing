@@ -1,14 +1,14 @@
 <template lang="pug">
   .details-info-block
     .details-info-block__icon
-      component(:is="selectedComponent")
+      component(:is="content.icon")
     .details-info-block__text
-      h5 {{ title }}
-      p {{ descr }}
+      h5 {{ content.text.title }}
+      p {{ content.text.description }}
       .details-info-block__button-line
         span
           next-arrow-icon
-        a Learn more
+        a {{ content.text.btnText }}
 </template>
 
 <script>
@@ -27,13 +27,10 @@
       EarthIcon, RadarIcon, ChatIcon, ClockIcon,
       LockIcon, ExchangeIcon, NextArrowIcon
     },
-    props: ['selectedComponent'],
-    data() {
-      return {
-        title: 'Hi-end Design',
-        descr: 'Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo.',
-        buttonText: 'Learn more'
-      };
+    props: {
+      content: {
+        type: Object
+      }
     }
   }
 </script>

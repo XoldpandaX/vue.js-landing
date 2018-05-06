@@ -5,16 +5,13 @@
         h2 {{ title }}
         p {{ description }}
       .details__block-line
-        details-info-block(:selectedComponent="'EarthIcon'")
-        details-info-block(:selectedComponent="'EarthIcon'")
-        details-info-block(:selectedComponent="'EarthIcon'")
-
-        details-info-block(:selectedComponent="'EarthIcon'")
-        details-info-block(:selectedComponent="'EarthIcon'")
-        details-info-block(:selectedComponent="'EarthIcon'")
+        details-info-block(v-for="content in blockContent",
+                          :key="content.id"
+                          :content="content")
 </template>
 
 <script>
+  import { detailsContent } from "../components/landing-components/details/details-content.js";
   import DetailsInfoBlock from './../components/landing-components/details/DetailsInfoBlock.vue';
 
   export default {
@@ -25,8 +22,12 @@
     data() {
       return {
         title: 'Our Services',
-        description: 'What we offer to our Customers. Brief list.'
+        description: 'What we offer to our Customers. Brief list.',
+        blockContent: {}
       };
+    },
+    created() {
+      this.blockContent = detailsContent;
     }
   }
 </script>

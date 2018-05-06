@@ -22,5 +22,5 @@ export const aboutContent = [
       title: 'Feedback',
       description: 'Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo.'
     }
-  },
+  }
 ];
