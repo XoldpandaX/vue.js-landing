@@ -3,15 +3,37 @@
 
   header {
     text-align: center;
-    margin-bottom: 50*$rem;
+    margin-bottom: 60*$rem;
 
     h2 {
+      margin: 0 0 20*$rem 0;
       font-weight: normal;
+      letter-spacing: -2*$rem;
       color: $support-block-background;
     }
 
     p {
       font-size: 14*$rem;
+    }
+  }
+
+  &__block-line {
+    display: flex;
+    flex-wrap: wrap;
+
+    .details-info-block {
+      flex-basis: calc(100% / 3);
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &__icon {
+        flex-basis: 120*$rem;
+      }
+
+      &__button-line {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }

@@ -1,8 +1,9 @@
 .details-info-block {
   display: flex;
+  margin-bottom: 60*$rem;
 
   &__icon {
-    width: 33*$rem;
+    flex-basis: 33*$rem;
     fill: $support-block-background;
   }
 
@@ -15,10 +16,7 @@
 
     p {
       font-size: 14*$rem;
-    }
-
-    button { //testing
-      padding: 0;
+      line-height: 1.5;
     }
   }
 
