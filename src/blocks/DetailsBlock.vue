@@ -4,7 +4,7 @@
       header
         h2 {{ title }}
         p {{ description }}
-      details-info-block
+      details-info-block(:selectedComponent="'ExchangeIcon'")
 </template>
 
 <script>
