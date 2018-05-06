@@ -10,11 +10,35 @@
     padding-left: 20px;
 
     h5  {
-      margin: 10*$rem 0;
+      margin: 10*$rem 0 15*$rem 0;
+    }
+
+    p {
+      font-size: 14*$rem;
     }
 
     button { //testing
       padding: 0;
+    }
+  }
+
+  &__button-line {
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 16*$rem;
+      margin-right: 10px;
+
+      svg {
+        fill: $support-block-background;
+      }
+    }
+
+    a {
+      color: $grey;
+      font-weight: 300;
+      font-size: 14*$rem;
     }
   }
 }
