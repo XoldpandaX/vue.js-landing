@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.showcase(:style="{background: `url(${background})`}")
+  section.showcase(:style="{'background-image': `url(${background})`}")
     .container
       .showcase__inner
         presentation-header(:title="title", :subtitle="subtitle")
