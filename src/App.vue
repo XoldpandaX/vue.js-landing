@@ -7,6 +7,7 @@
     user-words-block
     support-block
     details-block
+    showcase-block
 </template>
 
 <script>
@@ -17,6 +18,7 @@
   import UserWordsBlock from './blocks/UserWordsBlock';
   import SupportBlock from './blocks/SupportBlock';
   import DetailsBlock from './blocks/DetailsBlock.vue';
+  import ShowcaseBlock from './blocks/ShowcaseBlock.vue';
 
   import { mapActions } from 'vuex';
 
@@ -27,7 +29,7 @@
     components: {
       HeaderBlock, SliderBlock, FeaturesBlock,
       AboutBlock, UserWordsBlock, SupportBlock,
-      DetailsBlock
+      DetailsBlock, ShowcaseBlock
     }
   }
 </script>
