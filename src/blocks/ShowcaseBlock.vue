@@ -20,8 +20,8 @@
 
     data() {
       return {
-        title: 'Work in Progress',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
+        title: 'The Showcase',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
       };
     }
   }

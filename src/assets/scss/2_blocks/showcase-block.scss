@@ -1,7 +1,12 @@
 .showcase {
+  padding: 100px 0 90px 0;
   color: $pure-white;
+  background-image: url('/src/assets/media/images/showcase/showcase_bg.jpg');
+  background-size: cover;
+  background-position: center;
 
   header {
+    margin-bottom: 80*$rem;
     text-align: center;
 
     h2 {
@@ -11,7 +16,7 @@
     }
 
     p {
-      color: $main-text;
+      margin-bottom: 0;
     }
   }
 

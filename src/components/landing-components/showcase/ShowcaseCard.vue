@@ -1,5 +1,6 @@
 <template lang="pug">
-  p hello
+  .showcase-card
+    div hfhdfhd
 </template>
 
 <script>
