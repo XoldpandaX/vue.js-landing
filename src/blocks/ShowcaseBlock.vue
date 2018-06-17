@@ -4,8 +4,12 @@
       header
         h2 {{ title }}
         p {{ description }}
-      .showcase-block__card-wrapper
+      .showcase__card-wrapper
         showcase-card
+        showcase-card
+        showcase-card
+        showcase-card
+
 </template>
 
 <script>

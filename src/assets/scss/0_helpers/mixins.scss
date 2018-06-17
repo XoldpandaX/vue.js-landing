@@ -4,3 +4,13 @@
   background-position: center;
   background-blend-mode: screen;
 }
+
+@mixin flex-basis-in-row ($elem-in-row, $marginL, $marginR) {
+  @if(#{$marginL} != 0 && #{$marginR} != 0) {
+    margin-right: #{$marginR};
+    margin-left: #{$marginL};
+    flex-basis: calc(100% / #{$elem-in-row} - (#{$marginL} + #{$marginR}));
+  } @else {
+    flex-basis: calc(100% / #{$elem-in-row});
+  }
+}

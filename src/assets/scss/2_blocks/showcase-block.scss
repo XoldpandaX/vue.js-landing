@@ -1,5 +1,5 @@
 .showcase {
-  padding: 100px 0 90px 0;
+  padding: 100px 20px 90px 20px;
   color: $pure-white;
   background-image: url('/src/assets/media/images/showcase/showcase_bg.jpg');
   background-size: cover;
@@ -21,6 +21,21 @@
   }
 
   &__card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 80*$rem;
+
+    .showcase-card {
+      margin-bottom: 20*$rem;
+      @include flex-basis-in-row(4, 10px, 10px);
+
+      @media screen and (max-width: $tablet-max-desctruct-point) {
+        @include flex-basis-in-row(2, 10px, 10px);
+      }
+
+      @media screen and(max-width: $mobile-md) {
+        @include flex-basis-in-row(1, 0px, 0px);
+      }
+    }
   }
 }

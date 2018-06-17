@@ -2,27 +2,31 @@
   @extend %convex-lower-shadow;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 425px;
   cursor: pointer;
 
   &__body {
     flex: 1 0 auto;
+    min-height: 300*$rem;
     border-radius: 3*$rem 3*$rem 0 0;
     background-image: url("/src/assets/media/images/showcase/texture02.jpg");
     background-size: cover;
     background-position: center;
+
+    @media screen and (max-width: $mobile-xs) {
+      min-height: 250*$rem;
+    }
   }
 
   &__footer {
     flex: 0 0 auto;
-    height: 30%;
+    max-height: 120px;
     padding: 20*$rem;
     border-radius: 0 0 3*$rem 3*$rem;
     background-color: white;
   }
   
   &__text {
+
     h5 {
       margin: 0 0 20*$rem 0;
       color: $main-text;
