@@ -1,0 +1,21 @@
+.showcase {
+  color: $pure-white;
+  
+  header {
+    text-align: center;
+
+    h2 {
+      margin: 0 0 1.25rem 0;
+      font-weight: normal;
+      letter-spacing: -0.125rem;
+    }
+
+    p {
+      color: $main-text;
+    }
+  }
+
+  &__card-wrapper {
+    margin-bottom: 80*$rem;
+  }
+}

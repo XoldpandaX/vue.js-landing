@@ -1,5 +1,6 @@
 export const userWordsContent = [
   {
+    id: '1',
     image: './src/assets/media/images/usersAvatars/userpic01.jpg',
     text: {
       topText: '"Exellent..."',
@@ -8,6 +9,7 @@ export const userWordsContent = [
     }
   },
   {
+    id: '2',
     image: './src/assets/media/images/usersAvatars/userpic02.jpg',
     text: {
       topText: '"100% Satisfied..."',

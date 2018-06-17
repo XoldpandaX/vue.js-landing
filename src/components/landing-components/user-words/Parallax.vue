@@ -6,7 +6,9 @@
         p {{ subtitle }}
       .container
         .parallax__row
-          recall(v-for="content in userWordsContent", :content="content")
+          recall(v-for="content in userWordsContent",
+                 :key="content.id",
+                 :content="content")
       .btn.btn--primed.btn--important.btn--big.btn--round.btn--round-big.btn--shadow-hover
         plus-icon
 </template>
