@@ -1,6 +1,10 @@
 <template lang="pug">
   .showcase-card
-    div hfhdfhd
+    .showcase-card__body
+    .showcase-card__footer
+      .showcase-card__text
+        h5 Wood
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </template>
 
 <script>
