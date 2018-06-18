@@ -4,7 +4,7 @@
     .showcase-card__footer
       .showcase-card__text
         h5 Wood
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elitr.
 </template>
 
 <script>
